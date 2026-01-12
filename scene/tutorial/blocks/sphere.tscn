@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://cs7xa0kalx44v"]
+
+[ext_resource type="Texture2D" uid="uid://iy3sj626gsfd" path="res://assets/tutorial/Sphere/tutorial_pink_sphere_1.png" id="1_o4duc"]
+[ext_resource type="Texture2D" uid="uid://ddvev84mjae5h" path="res://assets/tutorial/Sphere/tutorial_pink_sphere_2.png" id="2_sd5uj"]
+[ext_resource type="Texture2D" uid="uid://codtp1hberhnj" path="res://assets/tutorial/Sphere/tutorial_sphere_1.png" id="3_k8gmv"]
+[ext_resource type="Texture2D" uid="uid://vogqhrw63io" path="res://assets/tutorial/Sphere/tutorial_sphere_2.png" id="4_h1hnp"]
+[ext_resource type="PackedScene" uid="uid://68xo03squjs3" path="res://scene/areaParry/areaParry.tscn" id="5_7h7bu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3o0as"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o4duc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sd5uj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_k8gmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h1hnp")
+}],
+"loop": true,
+"name": &"parried",
+"speed": 12.0
+}]
+
+[node name="Sphere" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_3o0as")
+
+[node name="AreaParry" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("5_7h7bu")]
+sprite = NodePath("..")

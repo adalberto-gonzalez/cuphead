@@ -1,0 +1,12 @@
+res://scene/bullets/peashooter/bullet.gd
+res://scene/bullets/peashooter/bullet.tscn
+res://scene/tutorial/tutorial.tscn
+res://scene/tutorial/blocks/shoot.tscn
+res://scene/player/player.tscn
+res://scene/player/player.gd
+res://singletons/SignalManager.gd
+res://scene/areaParry/areaParry.tscn
+res://scene/areaParry/area_parry.gd
+res://scene/areaParry/parry_sphere.tscn
+res://scene/tutorial/blocks/sphere.tscn
+res://singletons/SoundManager.gd

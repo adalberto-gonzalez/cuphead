@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://fp7icd41f5fm"]
+
+[ext_resource type="FontFile" uid="uid://br6emg6xst1yk" path="res://assets/fonts/OpenSans-ExtraBold.ttf" id="1_islhd"]
+
+[resource]
+font = ExtResource("1_islhd")
+font_size = 46

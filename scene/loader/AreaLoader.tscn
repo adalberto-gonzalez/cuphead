@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://lvk4vmkcrk32"]
+
+[ext_resource type="Script" uid="uid://b0bf1bxpghwji" path="res://scene/loader/area_loader.gd" id="1_hbuvs"]
+[ext_resource type="AudioStream" uid="uid://b10qfpf6brf1g" path="res://assets/sound/fx/WorldMap_LevelSelect_BubbleAppear.wav" id="2_cbkjo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbuvs"]
+size = Vector2(145, 130)
+
+[node name="AreaLoader" type="Area2D"]
+collision_layer = 4
+collision_priority = 2.0
+script = ExtResource("1_hbuvs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_hbuvs")
+debug_color = Color(0.7578756, 0.45351994, 0.066691935, 0.41960785)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cbkjo")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

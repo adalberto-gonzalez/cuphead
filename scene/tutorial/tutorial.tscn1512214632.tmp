@@ -1,0 +1,183 @@
+[gd_scene load_steps=21 format=3 uid="uid://ca0ekkp6xds8h"]
+
+[ext_resource type="PackedScene" uid="uid://7y7o28hb682p" path="res://scene/tutorial/background.tscn" id="1_1bj4x"]
+[ext_resource type="PackedScene" uid="uid://cdnkfs5g7qoqo" path="res://scene/playerCamera/playerCamera.tscn" id="1_raclm"]
+[ext_resource type="PackedScene" uid="uid://dhoc7kox6ficn" path="res://scene/player/player.tscn" id="2_yyy0d"]
+[ext_resource type="PackedScene" uid="uid://bnlgkagt1ef15" path="res://scene/tutorial/foreground.tscn" id="3_raclm"]
+[ext_resource type="PackedScene" uid="uid://dfjav6ljlolf1" path="res://scene/tutorial/blocks/cube.tscn" id="6_rkbay"]
+[ext_resource type="PackedScene" uid="uid://d4h7m1xw0c6ny" path="res://scene/tutorial/blocks/cylinder2.tscn" id="7_ap38n"]
+[ext_resource type="Texture2D" uid="uid://1dsju6sitd23" path="res://assets/tutorial/Arrows/tutorial_arrow_duck.png" id="7_cmvyy"]
+[ext_resource type="LabelSettings" uid="uid://bjsx3tcv1x7im" path="res://assets/fonts_settings/tutorial_title.tres" id="8_7aa0t"]
+[ext_resource type="LabelSettings" uid="uid://ty3bp382wnf7" path="res://assets/fonts_settings/tutorial_subtitle.tres" id="9_26if5"]
+[ext_resource type="Texture2D" uid="uid://166dkv526v38" path="res://assets/tutorial/Arrows/tutorial_arrow_jump.png" id="10_is14p"]
+[ext_resource type="Texture2D" uid="uid://dxxks0n57jlg2" path="res://assets/tutorial/Arrows/tutorial_arrow_dash.png" id="11_1gqgm"]
+[ext_resource type="PackedScene" uid="uid://cy7bq2sypcb1n" path="res://scene/fx/fx.tscn" id="12_1gqgm"]
+[ext_resource type="PackedScene" uid="uid://pnxqmvgla7ej" path="res://scene/exit/exit_door.tscn" id="13_oqpdg"]
+[ext_resource type="AudioStream" uid="uid://stvudc2f683t" path="res://assets/sound/music/04 Tutorial.mp3" id="14_6qdna"]
+[ext_resource type="PackedScene" uid="uid://ctuhtboks5w67" path="res://scene/irisTransition/iris_transition.tscn" id="15_knl1e"]
+[ext_resource type="PackedScene" uid="uid://cmg8n6o8hymdf" path="res://scene/tutorial/blocks/rectangle.tscn" id="16_5qj00"]
+[ext_resource type="PackedScene" uid="uid://lvk4vmkcrk32" path="res://scene/loader/AreaLoader.tscn" id="16_f0oh0"]
+[ext_resource type="PackedScene" uid="uid://bhceymc1cog6q" path="res://scene/tutorial/blocks/shoot.tscn" id="17_f0oh0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbay"]
+size = Vector2(3838.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqpdg"]
+size = Vector2(83.75, 591)
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_yyy0d")]
+position = Vector2(194, 523)
+
+[node name="Background" parent="." instance=ExtResource("1_1bj4x")]
+layer = -1
+
+[node name="Cube" parent="." instance=ExtResource("6_rkbay")]
+position = Vector2(1288, 553)
+collision_mask = 9
+
+[node name="Cylinder2" parent="." instance=ExtResource("7_ap38n")]
+position = Vector2(1878, 446)
+collision_mask = 9
+
+[node name="Rectangle" parent="." instance=ExtResource("16_5qj00")]
+position = Vector2(2815, 519)
+collision_mask = 9
+
+[node name="Cube2" parent="." instance=ExtResource("17_f0oh0")]
+position = Vector2(2805, 327)
+collision_mask = 9
+
+[node name="PlayerCamera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_raclm")]
+position = Vector2(3, -27)
+limit_top = 0
+limit_bottom = 720
+player = NodePath("../Player")
+
+[node name="Foreground" parent="." instance=ExtResource("3_raclm")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(3, -27)
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1909.75, 630)
+shape = SubResource("RectangleShape2D_rkbay")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-46, 319)
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_oqpdg")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(3865, 319)
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("RectangleShape2D_oqpdg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 106.0
+offset_top = 316.0
+offset_right = 397.0
+offset_bottom = 374.0
+text = "THE TUTORIAL"
+label_settings = ExtResource("8_7aa0t")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 480.0
+offset_top = 279.0
+offset_right = 771.0
+offset_bottom = 337.0
+text = "DUCK"
+label_settings = ExtResource("8_7aa0t")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="TutorialArrowDuck" type="Sprite2D" parent="Label2"]
+position = Vector2(152, 163)
+texture = ExtResource("7_cmvyy")
+
+[node name="Label3" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 58.0
+offset_right = 318.0
+offset_bottom = 116.0
+text = "Hold down to crouch."
+label_settings = ExtResource("9_26if5")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 890.0
+offset_top = 364.0
+offset_right = 1181.0
+offset_bottom = 422.0
+text = "Jump"
+label_settings = ExtResource("8_7aa0t")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label3" type="Label" parent="Label3"]
+visible = false
+layout_mode = 0
+offset_left = -22.0
+offset_top = 58.0
+offset_right = 318.0
+offset_bottom = 116.0
+text = "Hold down to crouch."
+label_settings = ExtResource("9_26if5")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 1286.0
+offset_top = 140.0
+offset_right = 1577.0
+offset_bottom = 198.0
+text = "Dash"
+label_settings = ExtResource("8_7aa0t")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label3" type="Label" parent="Label4"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 50.0
+offset_right = 249.0
+offset_bottom = 112.0
+text = "Quick evade on 
+ground or air."
+label_settings = ExtResource("9_26if5")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="TutorialArrowJump" type="Sprite2D" parent="."]
+position = Vector2(1116, 424)
+texture = ExtResource("10_is14p")
+
+[node name="TutorialArrowDash" type="Sprite2D" parent="."]
+position = Vector2(1609, 169)
+texture = ExtResource("11_1gqgm")
+
+[node name="Fx" parent="." instance=ExtResource("12_1gqgm")]
+
+[node name="ExitDoor" parent="." instance=ExtResource("13_oqpdg")]
+position = Vector2(3704, 480)
+
+[node name="AreaLoader" parent="." instance=ExtResource("16_f0oh0")]
+position = Vector2(3693, 510)
+scale = Vector2(1.71, 1.71)
+target_scene_path = "res://scene/island/island.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_6qdna")
+volume_db = -4.0
+autoplay = true
+parameters/looping = true
+
+[node name="GameOver" parent="." instance=ExtResource("15_knl1e")]

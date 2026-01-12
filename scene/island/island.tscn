@@ -1,0 +1,213 @@
+[gd_scene load_steps=21 format=3 uid="uid://cx72t4nwwvug0"]
+
+[ext_resource type="PackedScene" uid="uid://ctuhtboks5w67" path="res://scene/irisTransition/iris_transition.tscn" id="1_j7ywt"]
+[ext_resource type="PackedScene" uid="uid://cdnkfs5g7qoqo" path="res://scene/playerCamera/playerCamera.tscn" id="3_0npav"]
+[ext_resource type="Texture2D" uid="uid://cok770oxcrdap" path="res://assets/island/ocean.png" id="3_pwhbu"]
+[ext_resource type="Texture2D" uid="uid://cql65qnf6xgfd" path="res://assets/island/world1_tree_island.png" id="4_k7bey"]
+[ext_resource type="Texture2D" uid="uid://dbulsgifx45qj" path="res://assets/island/world1_small_island_main.png" id="5_dmsum"]
+[ext_resource type="Texture2D" uid="uid://20bbcy1cxodv" path="res://assets/island/world1_large_island_main_01.png" id="6_5pgqe"]
+[ext_resource type="Texture2D" uid="uid://db24wgsqxslpy" path="res://assets/island/world1_bridge_main.png" id="7_rqohe"]
+[ext_resource type="Texture2D" uid="uid://bnaftsngmrioa" path="res://assets/island/world1_bride_main_back_top.png" id="8_sjev7"]
+[ext_resource type="Texture2D" uid="uid://dlre2t70v4dyu" path="res://assets/island/world1_bride_main_front_top.png" id="9_84w6i"]
+[ext_resource type="Texture2D" uid="uid://f1uuhoygg7oe" path="res://assets/island/world1_large_island_top_mausoleumBush.png" id="10_tsskp"]
+[ext_resource type="Texture2D" uid="uid://5p7n3bs7epy7" path="res://assets/island/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Overworld - Home Sweet Home.png" id="11_j7ywt"]
+[ext_resource type="Texture2D" uid="uid://bug14ex74w1j6" path="res://assets/island/world1_lighthouse.png" id="11_nstfn"]
+[ext_resource type="Texture2D" uid="uid://cy5wodd7escmo" path="res://assets/island/world1_top_level_pieces_01.png" id="12_r7207"]
+[ext_resource type="PackedScene" uid="uid://dov0ylhnjxvyt" path="res://scene/player/player_top_down.tscn" id="13_0npav"]
+[ext_resource type="PackedScene" uid="uid://lvk4vmkcrk32" path="res://scene/loader/AreaLoader.tscn" id="15_dmsum"]
+[ext_resource type="AudioStream" uid="uid://bsryvuq58v3f1" path="res://assets/sound/music/06 Inkwell Isle One.mp3" id="15_k7bey"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwhbu"]
+atlas = ExtResource("11_j7ywt")
+region = Rect2(2, 2, 276, 355)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0npav"]
+atlas = ExtResource("11_j7ywt")
+region = Rect2(280, 2, 276, 355)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7bey"]
+atlas = ExtResource("11_j7ywt")
+region = Rect2(558, 2, 276, 355)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmsum"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwhbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0npav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7bey")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Island" type="Node2D"]
+
+[node name="Iris" parent="." instance=ExtResource("1_j7ywt")]
+
+[node name="PlayerCamera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_0npav")]
+position = Vector2(-1158, -173)
+limit_left = -2545
+limit_top = -1375
+limit_right = 2615
+limit_bottom = 1600
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("13_0npav")]
+position = Vector2(-1159, -179)
+
+[node name="Scene" type="Node2D" parent="."]
+
+[node name="Ocean" type="Sprite2D" parent="Scene"]
+position = Vector2(-1576, -446)
+texture = ExtResource("3_pwhbu")
+
+[node name="Ocean2" type="Sprite2D" parent="Scene"]
+position = Vector2(-621, -446)
+texture = ExtResource("3_pwhbu")
+
+[node name="Ocean3" type="Sprite2D" parent="Scene"]
+position = Vector2(339, -446)
+texture = ExtResource("3_pwhbu")
+
+[node name="Ocean4" type="Sprite2D" parent="Scene"]
+position = Vector2(1294, -446)
+texture = ExtResource("3_pwhbu")
+
+[node name="Ocean5" type="Sprite2D" parent="Scene"]
+position = Vector2(-1576, 642)
+texture = ExtResource("3_pwhbu")
+
+[node name="Ocean6" type="Sprite2D" parent="Scene"]
+position = Vector2(-621, 642)
+texture = ExtResource("3_pwhbu")
+
+[node name="Ocean7" type="Sprite2D" parent="Scene"]
+position = Vector2(339, 642)
+texture = ExtResource("3_pwhbu")
+
+[node name="Ocean8" type="Sprite2D" parent="Scene"]
+position = Vector2(1294, 642)
+texture = ExtResource("3_pwhbu")
+
+[node name="World1TreeIsland2" type="Sprite2D" parent="Scene"]
+position = Vector2(-1690, -388)
+texture = ExtResource("4_k7bey")
+
+[node name="World1SmallIslandMain" type="Sprite2D" parent="Scene"]
+position = Vector2(-1027, -75)
+texture = ExtResource("5_dmsum")
+
+[node name="World1LargeIslandMain01" type="Sprite2D" parent="Scene"]
+position = Vector2(160, -28)
+texture = ExtResource("6_5pgqe")
+
+[node name="World1BridgeMain" type="Sprite2D" parent="Scene"]
+position = Vector2(-402, 26)
+texture = ExtResource("7_rqohe")
+
+[node name="World1BrideMainBackTop" type="Sprite2D" parent="Scene"]
+position = Vector2(-402, -41)
+texture = ExtResource("8_sjev7")
+
+[node name="World1LargeIslandTopMausoleumBush" type="Sprite2D" parent="Scene"]
+position = Vector2(739, 496)
+texture = ExtResource("10_tsskp")
+
+[node name="World1SmallIslandMain2" type="Sprite2D" parent="Scene"]
+position = Vector2(1034, -197)
+texture = ExtResource("5_dmsum")
+
+[node name="World1LargeIslandTopMausoleumBush2" type="Sprite2D" parent="Scene"]
+position = Vector2(757, 185)
+texture = ExtResource("10_tsskp")
+
+[node name="World1LargeIslandTopMausoleumBush3" type="Sprite2D" parent="Scene"]
+position = Vector2(807, 242)
+rotation = 0.73069507
+texture = ExtResource("10_tsskp")
+
+[node name="World1Lighthouse" type="Sprite2D" parent="Scene"]
+position = Vector2(878, 696)
+texture = ExtResource("11_nstfn")
+
+[node name="World1TreeIsland" type="Sprite2D" parent="Scene"]
+position = Vector2(767, 177)
+texture = ExtResource("4_k7bey")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Scene"]
+position = Vector2(-1168, -269)
+sprite_frames = SubResource("SpriteFrames_dmsum")
+autoplay = "default"
+frame_progress = 0.23928379
+
+[node name="World1TopLevelPieces01" type="Sprite2D" parent="Scene"]
+z_index = 3
+position = Vector2(-637, 31)
+texture = ExtResource("12_r7207")
+
+[node name="World1BrideMainFrontTop" type="Sprite2D" parent="Scene"]
+z_index = 3
+position = Vector2(-401, 79)
+texture = ExtResource("9_84w6i")
+
+[node name="Collisions" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Collisions"]
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D"]
+position = Vector2(-1513, -289)
+polygon = PackedVector2Array(-56, 544, 1, -67, 221, -60, 168, 76, 183, 173, 256, 287, 359, 390, 296, 435, 449, 486, 589, 552, 687, 587, 847, 540, 1043, 402, 833, 688)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Collisions"]
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D2"]
+position = Vector2(-1513, -289)
+polygon = PackedVector2Array(467, -276, 197, 78, 439, 60, 501, 55, 587, 188, 591, 268, 513, 395, 592, 444, 758, 404, 814, 333, 794, 202, 823, 126, 1043, 250, 1064, -69)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Collisions"]
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D3"]
+position = Vector2(-1513, -289)
+polygon = PackedVector2Array(2129, -339, 1384, -439, 1494, -201, 1651, -175, 1700, -55, 1752, -17, 1908, -69, 1971, -45, 1957, -116, 2005, -228, 2095, -104)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Collisions"]
+position = Vector2(0, 35)
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D4"]
+position = Vector2(-1513, -289)
+polygon = PackedVector2Array(1475, 943, 1462, 925, 1664, 765, 1574, 688, 1681, 569, 1866, 491, 1925, 313, 1853, 237, 1825, 130, 1875, 50, 2004, -106, 2044, -207, 2110, -120, 2391, 342)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Collisions"]
+position = Vector2(0, 35)
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D5"]
+position = Vector2(-1513, -289)
+polygon = PackedVector2Array(1340, 829, 1236, 690, 1389, 582, 1498, 498, 1423, 356, 1307, 373, 1281, 357, 1236, 349, 999, 346, 933, 348, 902, 364, 944, 418, 928, 475, 1109, 1258, 1476, 936)
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Collisions"]
+position = Vector2(0, 35)
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D6"]
+position = Vector2(-1513, -289)
+polygon = PackedVector2Array(1418, -136, 1410, -87, 1432, -30, 1426, 156, 1375, 221, 1127, 227, 932, 225, 1006, 179, 1196, -345, 1517, -223)
+
+[node name="AreaLoader" parent="." instance=ExtResource("15_dmsum")]
+position = Vector2(-1142, -245)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_k7bey")
+volume_db = -4.0
+autoplay = true
+parameters/looping = true

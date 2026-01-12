@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://68xo03squjs3"]
+
+[ext_resource type="Script" uid="uid://cjaq10mq5hmt1" path="res://scene/areaParry/area_parry.gd" id="1_iml0f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fgyt8"]
+radius = 37.48333
+
+[node name="AreaParry" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_iml0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fgyt8")
+debug_color = Color(0.79141444, 0.30106676, 0.7684571, 0.41960785)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqkko4s1ehxd3"
+path="res://.godot/imported/01 Don't Deal With The Devil.mp3-038718867702fa8b2441244dd14a195b.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/music/01 Don't Deal With The Devil.mp3"
+dest_files=["res://.godot/imported/01 Don't Deal With The Devil.mp3-038718867702fa8b2441244dd14a195b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

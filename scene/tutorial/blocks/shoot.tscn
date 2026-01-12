@@ -1,0 +1,148 @@
+[gd_scene load_steps=21 format=3 uid="uid://bhceymc1cog6q"]
+
+[ext_resource type="Script" uid="uid://ciod8mk0olqkx" path="res://scene/tutorial/blocks/destructible.gd" id="1_dry2s"]
+[ext_resource type="Texture2D" uid="uid://eyasx108wqh4" path="res://assets/tutorial/Shapes and Exit Door/tutorial_pyramid_topper.png" id="2_kooak"]
+[ext_resource type="Texture2D" uid="uid://b5h3haa2kwotw" path="res://assets/tutorial/Signs/tutorial_target_0001.png" id="3_m01t1"]
+[ext_resource type="Texture2D" uid="uid://nq78dftvpej" path="res://assets/tutorial/Signs/tutorial_target_0002.png" id="4_bytra"]
+[ext_resource type="Texture2D" uid="uid://c41crwm3g80fc" path="res://assets/tutorial/Signs/tutorial_target_0003.png" id="5_l21vo"]
+[ext_resource type="Texture2D" uid="uid://doke8pg7gvmst" path="res://assets/player/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Miscellaneous - Item Sold SFX (Shop).png" id="6_kooak"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s3h48"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_m01t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bytra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l21vo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_kooak"]
+points = PackedVector2Array(-110.735, 115.26, 116.575, 115.26, 3.955, -9.245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kooak"]
+atlas = ExtResource("6_kooak")
+region = Rect2(3, 4, 460, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m01t1"]
+atlas = ExtResource("6_kooak")
+region = Rect2(467, 4, 460, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bytra"]
+atlas = ExtResource("6_kooak")
+region = Rect2(931, 4, 460, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l21vo"]
+atlas = ExtResource("6_kooak")
+region = Rect2(1395, 4, 460, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3h48"]
+atlas = ExtResource("6_kooak")
+region = Rect2(1859, 4, 460, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqx8f"]
+atlas = ExtResource("6_kooak")
+region = Rect2(2323, 4, 460, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dvrc"]
+atlas = ExtResource("6_kooak")
+region = Rect2(2787, 4, 460, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg602"]
+atlas = ExtResource("6_kooak")
+region = Rect2(3251, 4, 460, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vx77"]
+atlas = ExtResource("6_kooak")
+region = Rect2(3715, 4, 460, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqkod"]
+atlas = ExtResource("6_kooak")
+region = Rect2(4179, 4, 460, 423)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dry2s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kooak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m01t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bytra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l21vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3h48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqx8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dvrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg602")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vx77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqkod")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qqx8f"]
+radius = 68.06615
+
+[node name="Cube" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_dry2s")
+
+[node name="Pyramid" type="Sprite2D" parent="."]
+texture = ExtResource("2_kooak")
+
+[node name="Target" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -135)
+scale = Vector2(1.375, 1.375)
+sprite_frames = SubResource("SpriteFrames_s3h48")
+autoplay = "default"
+frame_progress = 0.069146894
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.5, -66)
+shape = SubResource("ConvexPolygonShape2D_kooak")
+
+[node name="Smoke" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(1, -135)
+scale = Vector2(1.375, 1.375)
+sprite_frames = SubResource("SpriteFrames_dry2s")
+frame = 9
+frame_progress = 1.0
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(1, -134)
+shape = SubResource("CircleShape2D_qqx8f")
+debug_color = Color(0.9782248, 0, 0.4016432, 0.41960785)
+
+[connection signal="animation_finished" from="Smoke" to="." method="_on_smoke_animation_finished"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

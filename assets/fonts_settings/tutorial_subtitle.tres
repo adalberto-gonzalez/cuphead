@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ty3bp382wnf7"]
+
+[ext_resource type="FontFile" uid="uid://dt3mf1ipqo11w" path="res://assets/fonts/OpenSans-Semibold.ttf" id="1_o1rmx"]
+
+[resource]
+line_spacing = 0.79
+font = ExtResource("1_o1rmx")
+font_size = 22
+font_color = Color(0.19434938, 0.19434923, 0.19434929, 1)

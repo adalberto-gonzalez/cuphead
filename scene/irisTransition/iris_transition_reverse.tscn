@@ -1,0 +1,145 @@
+[gd_scene load_steps=21 format=3 uid="uid://faxqk7htkit2"]
+
+[ext_resource type="Script" uid="uid://bwoidbibcai1x" path="res://scene/irisTransition/iris_transition_reverse.gd" id="1_avb4q"]
+[ext_resource type="Texture2D" uid="uid://bcun3cywtndb5" path="res://assets/transitions/iris/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Miscellaneous - Iris Transition.png" id="2_a41ls"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh3ad"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(514, 1450, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_603x8"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(0, 1450, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkh4y"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(1028, 1160, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sup5r"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(514, 1160, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g30ge"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(0, 1160, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvhih"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(1028, 870, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv51n"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(514, 870, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohf05"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(0, 870, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj3ar"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(1028, 580, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uqpk"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(514, 580, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4nth"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(0, 580, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jokyn"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(1028, 290, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdbqd"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(514, 290, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okfy4"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(0, 290, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05aty"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(1028, 0, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nba1v"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(514, 0, 514, 290)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h05fl"]
+atlas = ExtResource("2_a41ls")
+region = Rect2(0, 0, 514, 290)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6mu5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh3ad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_603x8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkh4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sup5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g30ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvhih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jv51n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohf05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tj3ar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6uqpk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4nth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jokyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdbqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okfy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05aty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nba1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h05fl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="Iris_reverse" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_avb4q")
+
+[node name="Iris_reverse" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(640.00006, 360)
+scale = Vector2(2.4902725, 2.4827588)
+sprite_frames = SubResource("SpriteFrames_6mu5t")
+frame = 16
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="Iris_reverse" to="." method="_on_animated_sprite_2d_animation_finished"]

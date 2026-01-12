@@ -1,0 +1,14 @@
+AnimatedSprite2D
+CollisionShape2D
+ShapeCast2D
+Area2D
+VisibleOnScreenNotifier2D
+Node2D
+Sprite2D
+AudioStreamPlayer
+ColorRect
+Timer
+Button
+AnimationPlayer
+CollisionPolygon2D
+StaticBody2D

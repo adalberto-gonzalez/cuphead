@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmg8n6o8hymdf"]
+
+[ext_resource type="Texture2D" uid="uid://blnymcyo447sh" path="res://assets/tutorial/Shapes and Exit Door/tutorial_plynth_after_pyramid_is_destroyed.png" id="1_d34vm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo64p"]
+size = Vector2(219, 217)
+
+[node name="Rectangle" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11, -19)
+texture = ExtResource("1_d34vm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-14.5, -27.5)
+shape = SubResource("RectangleShape2D_jo64p")

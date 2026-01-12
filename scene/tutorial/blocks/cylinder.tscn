@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbc3iyu1rkeuw"]
+
+[ext_resource type="Texture2D" uid="uid://btjhqvrly61il" path="res://assets/tutorial/Shapes and Exit Door/tutorial_cylinder_1.png" id="1_h0md2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo64p"]
+size = Vector2(192, 339)
+
+[node name="Cylinder" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h0md2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 1.5)
+shape = SubResource("RectangleShape2D_jo64p")

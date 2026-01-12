@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdnkfs5g7qoqo"]
+
+[ext_resource type="Script" uid="uid://ct7bdf1gkl76w" path="res://scene/playerCamera/player_camera.gd" id="1_3eaom"]
+
+[node name="PlayerCamera" type="Camera2D"]
+limit_left = 0
+limit_bottom = 670
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+script = ExtResource("1_3eaom")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
