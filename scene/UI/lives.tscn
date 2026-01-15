@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://q2dhqbsu3mha"]
+
+[ext_resource type="Script" uid="uid://6fafklp63rco" path="res://scene/UI/lives.gd" id="1_dmef3"]
+[ext_resource type="Texture2D" uid="uid://csryteh4n4mnl" path="res://assets/misc/Health.png" id="1_mho2u"]
+
+[node name="Lives" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_dmef3")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="UI" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(62, 685)
+texture = ExtResource("1_mho2u")
+hframes = 6
+vframes = 2
+frame = 3

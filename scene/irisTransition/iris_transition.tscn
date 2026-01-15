@@ -130,7 +130,7 @@ animations = [{
 "speed": 24.0
 }]
 
-[node name="GameOver" type="CanvasLayer"]
+[node name="Iris" type="CanvasLayer"]
 layer = 3
 script = ExtResource("1_4mswj")
 

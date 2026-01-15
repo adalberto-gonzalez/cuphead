@@ -1,0 +1,130 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8k3m2n4p5q6r"]
+
+[ext_resource type="Texture2D" uid="uid://c2ulae80pnmqc" path="res://Funfair Fever/BG/lv_2-1_sky-loop.png" id="1_sky"]
+[ext_resource type="Texture2D" uid="uid://bbxdboo0x3oxk" path="res://Funfair Fever/BG/lv2-1_bg_far_hills_loop.png" id="2_farhills"]
+[ext_resource type="Texture2D" uid="uid://ed0tae80ta62" path="res://Funfair Fever/BG/lv2-1_bg_close-hills-loop.png" id="3_closehills"]
+[ext_resource type="Texture2D" uid="uid://cjf7p0ky04tkf" path="res://Funfair Fever/BG/lv2-1_bg_outside_poster_bunting_1.png" id="4_bunting"]
+[ext_resource type="Texture2D" uid="uid://bd2euowu0gqp6" path="res://Funfair Fever/BG/lv2-1_bg_outside_clown_poster.png" id="5_clown"]
+[ext_resource type="Texture2D" uid="uid://c8mxi3bxfs3od" path="res://Funfair Fever/BG/lv2-1_bg_outside_elephant_poster.png" id="6_elephant"]
+[ext_resource type="Texture2D" uid="uid://dhptcqhhl4whj" path="res://Funfair Fever/BG/lv2-1_bg_outside_opening_soon_sign.png" id="7_opening"]
+[ext_resource type="Texture2D" uid="uid://d0eobrbmoty6c" path="res://Funfair Fever/BG/lv2-1_bg_outside_ticket_booth.png" id="8_ticket"]
+[ext_resource type="Texture2D" uid="uid://cujrd6be5suhd" path="res://Funfair Fever/BG/lv2-1_bg_outside_carnival_sign.png" id="9_carnival"]
+[ext_resource type="Texture2D" uid="uid://bqndo5scmdqxv" path="res://Funfair Fever/BG/lv2-1_bg_outside_striped_tent.png" id="10_tent"]
+
+[node name="Background" type="CanvasLayer"]
+layer = -2
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="SkyLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2046, 0)
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground/SkyLayer"]
+texture = ExtResource("1_sky")
+centered = false
+
+[node name="FarHillsLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2045, 0)
+
+[node name="FarHills" type="Sprite2D" parent="ParallaxBackground/FarHillsLayer"]
+position = Vector2(0, 260)
+texture = ExtResource("2_farhills")
+centered = false
+
+[node name="CloseHillsLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2042, 0)
+
+[node name="CloseHills" type="Sprite2D" parent="ParallaxBackground/CloseHillsLayer"]
+position = Vector2(0, 330)
+texture = ExtResource("3_closehills")
+centered = false
+
+[node name="DecorationsLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Bunting1" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(300, 120)
+texture = ExtResource("4_bunting")
+
+[node name="Bunting2" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(2300, 120)
+texture = ExtResource("4_bunting")
+
+[node name="Bunting3" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(4300, 120)
+texture = ExtResource("4_bunting")
+
+[node name="Bunting4" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(6300, 120)
+texture = ExtResource("4_bunting")
+
+[node name="Bunting5" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(8300, 120)
+texture = ExtResource("4_bunting")
+
+[node name="ClownPoster" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(700, 320)
+texture = ExtResource("5_clown")
+
+[node name="ElephantPoster" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(1150, 320)
+texture = ExtResource("6_elephant")
+
+[node name="OpeningSign" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(1706, 372)
+texture = ExtResource("7_opening")
+
+[node name="TicketBooth" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(2150, 360)
+texture = ExtResource("8_ticket")
+
+[node name="CarnivalSign" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(2800, 260)
+texture = ExtResource("9_carnival")
+
+[node name="Tent1" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(3400, 260)
+texture = ExtResource("10_tent")
+
+[node name="Tent2" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(5200, 260)
+texture = ExtResource("10_tent")
+
+[node name="ClownPoster2" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(4000, 320)
+texture = ExtResource("5_clown")
+
+[node name="ElephantPoster2" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(4450, 320)
+texture = ExtResource("6_elephant")
+
+[node name="OpeningSign2" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(5050, 380)
+texture = ExtResource("7_opening")
+
+[node name="TicketBooth2" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(5500, 360)
+texture = ExtResource("8_ticket")
+
+[node name="CarnivalSign2" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(6100, 260)
+texture = ExtResource("9_carnival")
+
+[node name="Tent3" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(6800, 260)
+texture = ExtResource("10_tent")
+
+[node name="ClownPoster3" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(7604, 304)
+texture = ExtResource("5_clown")
+
+[node name="ElephantPoster3" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(7946, 284)
+texture = ExtResource("6_elephant")
+
+[node name="TicketBooth3" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(8700, 360)
+texture = ExtResource("8_ticket")
+
+[node name="Tent4" type="Sprite2D" parent="ParallaxBackground/DecorationsLayer"]
+position = Vector2(9200, 260)
+texture = ExtResource("10_tent")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://c8ox847mdcnh4"]
+[gd_scene load_steps=65 format=3 uid="uid://c8ox847mdcnh4"]
 
 [ext_resource type="Script" uid="uid://vef4ny223eyn" path="res://scene/menu/menu.gd" id="1_3y2rt"]
 [ext_resource type="Texture2D" uid="uid://bfeuyk0vepfgp" path="res://assets/title screen/Background/title_screen_background.png" id="2_1widw"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ctuhtboks5w67" path="res://scene/irisTransition/iris_transition.tscn" id="2_so1sr"]
 [ext_resource type="AudioStream" uid="uid://cqkko4s1ehxd3" path="res://assets/sound/music/01 Don't Deal With The Devil.mp3" id="3_i6gmf"]
 [ext_resource type="Texture2D" uid="uid://b0qc6a2firi4p" path="res://assets/title screen/Cuphead and Mugman/cuphead_title_screen_0001.png" id="3_so1sr"]
-[ext_resource type="FontFile" uid="uid://br6emg6xst1yk" path="res://assets/fonts/OpenSans-ExtraBold.ttf" id="4_a4adv"]
 [ext_resource type="Texture2D" uid="uid://bygogw30pyg03" path="res://assets/title screen/Cuphead and Mugman/cuphead_title_screen_0002.png" id="4_u1vy3"]
 [ext_resource type="Texture2D" uid="uid://b7kq8td666y5r" path="res://assets/title screen/Cuphead and Mugman/cuphead_title_screen_0003.png" id="5_setcg"]
 [ext_resource type="Texture2D" uid="uid://byqupv5ttnqnm" path="res://assets/title screen/Cuphead and Mugman/cuphead_title_screen_0004.png" id="6_i6gmf"]
@@ -42,7 +41,9 @@
 [ext_resource type="Texture2D" uid="uid://ykvx46q02qew" path="res://assets/title screen/Cuphead and Mugman/cuphead_title_screen_0034.png" id="36_d0dyp"]
 [ext_resource type="Texture2D" uid="uid://bcun3cywtndb5" path="res://assets/transitions/iris/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Miscellaneous - Iris Transition.png" id="38_setcg"]
 [ext_resource type="Script" uid="uid://bwoidbibcai1x" path="res://scene/irisTransition/iris_transition_reverse.gd" id="39_i6gmf"]
+[ext_resource type="FontFile" uid="uid://dc4cpyynd3nqx" path="res://assets/fonts/CupheadVogue-ExtraBold.otf" id="42_8gp46"]
 [ext_resource type="Texture2D" uid="uid://b40djrbnu6skp" path="res://assets/title screen/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Miscellaneous - Main Menu Background.png" id="43_a4adv"]
+[ext_resource type="Script" uid="uid://c4kvwsgso0o48" path="res://scene/menu/blink.gd" id="43_n30xg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0witg"]
 animations = [{
@@ -153,6 +154,13 @@ animations = [{
 "name": &"default",
 "speed": 24.0
 }]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n30xg"]
+font = ExtResource("42_8gp46")
+font_size = 36
+font_color = Color(0.90588236, 0.73333335, 0.29803923, 1)
+outline_size = 10
+outline_color = Color(0.08468992, 0.08468992, 0.08468992, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gh3ad"]
 atlas = ExtResource("38_setcg")
@@ -309,14 +317,14 @@ region_rect = Rect2(0, 0, 1411.0575, 1024.3015)
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_a4adv")
+theme_override_fonts/font = ExtResource("42_8gp46")
 theme_override_font_sizes/font_size = 38
 text = "Play"
 flat = true
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_a4adv")
+theme_override_fonts/font = ExtResource("42_8gp46")
 theme_override_font_sizes/font_size = 38
 text = "Exit"
 flat = true
@@ -337,6 +345,23 @@ position = Vector2(666, 417)
 sprite_frames = SubResource("SpriteFrames_0witg")
 autoplay = "default"
 frame_progress = 0.4280083
+
+[node name="Label" type="Label" parent="Cuphead"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -752.5
+offset_top = -398.0
+offset_right = -432.5
+offset_bottom = -340.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "PRESS ANY KEY"
+label_settings = SubResource("LabelSettings_n30xg")
+horizontal_alignment = 1
+script = ExtResource("43_n30xg")
 
 [node name="Iris_reverse" type="AnimatedSprite2D" parent="."]
 visible = false

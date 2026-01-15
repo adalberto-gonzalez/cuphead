@@ -1,0 +1,243 @@
+[gd_scene load_steps=40 format=3 uid="uid://h0vmyabpk8un"]
+
+[ext_resource type="Script" uid="uid://dapqo4lenpjp2" path="res://scene/cagneyCarnation/seeds/chomper_seed.gd" id="1_40fpw"]
+[ext_resource type="Texture2D" uid="uid://qlqkyxbtujha" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_01.png" id="1_sr6e1"]
+[ext_resource type="Texture2D" uid="uid://cjne64ayn6pxf" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_02.png" id="2_mf55p"]
+[ext_resource type="Texture2D" uid="uid://y7yger8rmyk2" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_03.png" id="3_amhwv"]
+[ext_resource type="Texture2D" uid="uid://c4nx6wqalsmfi" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_04.png" id="4_natli"]
+[ext_resource type="Texture2D" uid="uid://bdmtue1h2gkfr" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_05.png" id="5_5tsok"]
+[ext_resource type="Texture2D" uid="uid://dbbjlmtqjotfm" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_06.png" id="6_7oger"]
+[ext_resource type="Texture2D" uid="uid://ber7l5o3xai04" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_07.png" id="7_wk67h"]
+[ext_resource type="Texture2D" uid="uid://cl8cqim0q2igr" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_08.png" id="8_g6rox"]
+[ext_resource type="Texture2D" uid="uid://3kedec0d175m" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_09.png" id="9_lao6g"]
+[ext_resource type="Texture2D" uid="uid://bxev2q6hhwdsv" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_10.png" id="10_nq4tk"]
+[ext_resource type="Texture2D" uid="uid://kilxnlobrc2t" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_11.png" id="11_1oy6o"]
+[ext_resource type="Texture2D" uid="uid://bfeg3jefxqp5k" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_12.png" id="12_rr7jd"]
+[ext_resource type="Texture2D" uid="uid://cuwwm6kfvfu45" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_13.png" id="13_yuhds"]
+[ext_resource type="Texture2D" uid="uid://bcjvo8yoi3dsj" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_14.png" id="14_yshhi"]
+[ext_resource type="Texture2D" uid="uid://dh284l0s4ao1l" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_15.png" id="15_uwcxa"]
+[ext_resource type="Texture2D" uid="uid://dothdxkukrieb" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_16.png" id="16_l7q3o"]
+[ext_resource type="Texture2D" uid="uid://dacim4ht7pbh" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_17.png" id="17_hacct"]
+[ext_resource type="Texture2D" uid="uid://c2rybeo5iynix" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_Fall_A_18.png" id="18_2ftkx"]
+[ext_resource type="Texture2D" uid="uid://c6b0klk1po2e" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_01.png" id="20_rr7jd"]
+[ext_resource type="Texture2D" uid="uid://dy4luttd1s4bf" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_02.png" id="21_yuhds"]
+[ext_resource type="Texture2D" uid="uid://b10bibefhlp83" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_03.png" id="22_yshhi"]
+[ext_resource type="Texture2D" uid="uid://dro7ke6f6ow6i" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_04.png" id="23_uwcxa"]
+[ext_resource type="Texture2D" uid="uid://y26ppv3c6ws7" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_05.png" id="24_l7q3o"]
+[ext_resource type="Texture2D" uid="uid://kaxqs4xlat73" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_06.png" id="25_hacct"]
+[ext_resource type="Texture2D" uid="uid://bwrg6sn2a5jlr" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_07.png" id="26_2ftkx"]
+[ext_resource type="Texture2D" uid="uid://b1rx4mhx2t166" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_08.png" id="27_8aeyr"]
+[ext_resource type="Texture2D" uid="uid://brx5v0pnpq3ix" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_09.png" id="28_2hqic"]
+[ext_resource type="Texture2D" uid="uid://nbjao2304ry0" path="res://assets/Cagney Carnation/seeds/Chomper/Seed/Seed_P_10.png" id="29_0nfme"]
+[ext_resource type="Texture2D" uid="uid://dl6dtjabwravw" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0004.png" id="30_8aeyr"]
+[ext_resource type="Texture2D" uid="uid://c0tsgitrpnus2" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0005.png" id="31_2hqic"]
+[ext_resource type="Texture2D" uid="uid://ck2pbvbfhoxnn" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0006.png" id="32_0nfme"]
+[ext_resource type="Texture2D" uid="uid://bqgu2jj3he2of" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0007.png" id="33_1mku8"]
+[ext_resource type="Texture2D" uid="uid://d37qfdnlbp3oj" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0001.png" id="34_aesmw"]
+[ext_resource type="Texture2D" uid="uid://dy84qgcuxcuc4" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0002.png" id="35_jpt65"]
+[ext_resource type="Texture2D" uid="uid://bmxil0206u6ie" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0003.png" id="36_v7oqd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8aeyr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sr6e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mf55p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_amhwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_natli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5tsok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7oger")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wk67h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g6rox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lao6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nq4tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1oy6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rr7jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yuhds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yshhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uwcxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_l7q3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hacct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2ftkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hacct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_l7q3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uwcxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yshhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yuhds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rr7jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1oy6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nq4tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lao6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g6rox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wk67h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7oger")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5tsok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_natli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_amhwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mf55p")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_rr7jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yuhds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yshhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_uwcxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_l7q3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_hacct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_2ftkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8aeyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_2hqic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0nfme")
+}],
+"loop": false,
+"name": &"land",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e1j8j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_8aeyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2hqic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_0nfme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_1mku8")
+}],
+"loop": false,
+"name": &"dust",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_aesmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jpt65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_v7oqd")
+}],
+"loop": false,
+"name": &"spawn",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rr7jd"]
+radius = 21.213203
+
+[node name="Seed" type="Area2D"]
+collision_layer = 16
+collision_mask = 4
+script = ExtResource("1_40fpw")
+
+[node name="seed" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8aeyr")
+animation = &"land"
+frame = 9
+frame_progress = 0.438965
+
+[node name="Spawn" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -186)
+sprite_frames = SubResource("SpriteFrames_e1j8j")
+animation = &"dust"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rr7jd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="seed" to="." method="_on_seed_animation_finished"]
+[connection signal="animation_finished" from="Spawn" to="." method="_on_spawn_animation_finished"]

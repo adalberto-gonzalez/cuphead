@@ -1,0 +1,216 @@
+[gd_scene load_steps=36 format=3 uid="uid://cw5s4llyb4a64"]
+
+[ext_resource type="Script" uid="uid://b0cv05wemdhyp" path="res://scene/cagneyCarnation/seeds/flytrap_seed.gd" id="1_ouof0"]
+[ext_resource type="Texture2D" uid="uid://15muci1yplxd" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_01.png" id="2_ouof0"]
+[ext_resource type="Texture2D" uid="uid://bmwg4opci2kol" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_02.png" id="3_gytkj"]
+[ext_resource type="Texture2D" uid="uid://c0p366anvrtho" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_03.png" id="4_uas1o"]
+[ext_resource type="Texture2D" uid="uid://fvw40fhonv4n" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_04.png" id="5_531ek"]
+[ext_resource type="Texture2D" uid="uid://elb6pny1cy0u" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_05.png" id="6_kr401"]
+[ext_resource type="Texture2D" uid="uid://ba3pn7yw5nlb" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_06.png" id="7_ybsqx"]
+[ext_resource type="Texture2D" uid="uid://ci10dot6e7nqw" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_07.png" id="8_e244o"]
+[ext_resource type="Texture2D" uid="uid://dhtbfjctuwgqw" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_08.png" id="9_71jx1"]
+[ext_resource type="Texture2D" uid="uid://db4hwt4o1niex" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_09.png" id="10_5afd7"]
+[ext_resource type="Texture2D" uid="uid://byriii0rxhx2b" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_10.png" id="11_16fg5"]
+[ext_resource type="Texture2D" uid="uid://c3oppt0nbjkuh" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_11.png" id="12_i811t"]
+[ext_resource type="Texture2D" uid="uid://btfyujn82s4xv" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_12.png" id="13_kruev"]
+[ext_resource type="Texture2D" uid="uid://k22w5vcnaee5" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_13.png" id="14_u7ksj"]
+[ext_resource type="Texture2D" uid="uid://ca0lljr8yuymp" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Fall_A_14.png" id="15_oggfx"]
+[ext_resource type="Texture2D" uid="uid://dai6jvhuandt7" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_01.png" id="16_ouof0"]
+[ext_resource type="Texture2D" uid="uid://b1u3vr6cdqm3g" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_02.png" id="17_gytkj"]
+[ext_resource type="Texture2D" uid="uid://bw0rphbvi6coc" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_03.png" id="18_uas1o"]
+[ext_resource type="Texture2D" uid="uid://84v5qv5c6t6u" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_04.png" id="19_531ek"]
+[ext_resource type="Texture2D" uid="uid://c7xdejvr2qniq" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_05.png" id="20_kr401"]
+[ext_resource type="Texture2D" uid="uid://cymjn0ol0wmrh" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_06.png" id="21_ybsqx"]
+[ext_resource type="Texture2D" uid="uid://d16lya8abhnag" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_07.png" id="22_e244o"]
+[ext_resource type="Texture2D" uid="uid://dbqdwod8k6c3p" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_08.png" id="23_71jx1"]
+[ext_resource type="Texture2D" uid="uid://csbfrbn1cenyq" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_09.png" id="24_5afd7"]
+[ext_resource type="Texture2D" uid="uid://cm66g4p24wx00" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed/Seed_Grow_10.png" id="25_16fg5"]
+[ext_resource type="Texture2D" uid="uid://dl6dtjabwravw" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0004.png" id="30_jhnu2"]
+[ext_resource type="Texture2D" uid="uid://c0tsgitrpnus2" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0005.png" id="31_meu4c"]
+[ext_resource type="Texture2D" uid="uid://ck2pbvbfhoxnn" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0006.png" id="32_h8c7y"]
+[ext_resource type="Texture2D" uid="uid://bqgu2jj3he2of" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0007.png" id="33_ukb28"]
+[ext_resource type="Texture2D" uid="uid://d37qfdnlbp3oj" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0001.png" id="34_0rap2"]
+[ext_resource type="Texture2D" uid="uid://dy84qgcuxcuc4" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0002.png" id="35_ciff1"]
+[ext_resource type="Texture2D" uid="uid://bmxil0206u6ie" path="res://assets/Cagney Carnation/seeds/flower_vine_groundburst_0003.png" id="36_2bf6k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8aeyr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ouof0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gytkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uas1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_531ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kr401")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ybsqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e244o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_71jx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5afd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_16fg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_i811t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kruev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_u7ksj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_oggfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_oggfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_u7ksj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kruev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_i811t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_16fg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5afd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_71jx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e244o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ybsqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kr401")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_531ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uas1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gytkj")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ouof0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gytkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uas1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_531ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kr401")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ybsqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_e244o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_71jx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_5afd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_16fg5")
+}],
+"loop": false,
+"name": &"land",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e1j8j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_jhnu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_meu4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_h8c7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ukb28")
+}],
+"loop": false,
+"name": &"dust",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_0rap2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ciff1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2bf6k")
+}],
+"loop": false,
+"name": &"spawn",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rr7jd"]
+radius = 21.213203
+
+[node name="Seed" type="Area2D"]
+collision_layer = 16
+collision_mask = 4
+script = ExtResource("1_ouof0")
+
+[node name="seed" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8aeyr")
+animation = &"land"
+
+[node name="Spawn" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -186)
+sprite_frames = SubResource("SpriteFrames_e1j8j")
+animation = &"dust"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rr7jd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="seed" to="." method="_on_seed_animation_finished"]
+[connection signal="animation_finished" from="Spawn" to="." method="_on_spawn_animation_finished"]

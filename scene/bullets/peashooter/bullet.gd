@@ -1,7 +1,7 @@
 extends Area2D
 
 var direction = Vector2.RIGHT
-var bullet_speed : float = 3000.0
+@export var bullet_speed : float = 3000.0
 @onready var death: AnimatedSprite2D = $death
 @onready var bullet: AnimatedSprite2D = $bullet
 

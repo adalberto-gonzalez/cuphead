@@ -1,12 +1,22 @@
-res://assets/tutorial/Sphere
-res://assets/player
-res://assets/bullet/peashooter
-res://singletons
+res://assets/boss
+res://assets/titles/Ready, WALLOP!
+res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed
+res://assets/Cagney Carnation/seeds/Venus Flytrap/Death
+res://assets/Cagney Carnation
+res://assets/Cagney Carnation/seeds/Vines
+res://assets/Cagney Carnation/seeds/Chomper/Death
+res://assets/Cagney Carnation/seeds/Chomper
+res://assets/Cagney Carnation/seeds
+res://assets/Cagney Carnation/seeds/Chomper/Seed
+res://assets/Cagney Carnation/seeds/Venus Flytrap
+res://Funhouse Frazzle Enemies Cuphead/Rocket/Spin
 res://assets/misc
-res://assets/fonts_settings
-res://assets/title screen/Cuphead and Mugman
-res://assets/tutorial/Signs
-res://assets/island
+res://Funhouse Frazzle Enemies Cuphead/Four Way Blaster/Barrel/Shoot/Horizontal
+res://assets/player
 res://assets/titles
-res://assets/transitions/iris
-res://assets/fx
+res://assets/enemies/Funhouse Frazzle/fun_wall
+res://assets/boss/Phase 3/Smash
+res://assets/boss/Phase 3/Move/Left
+res://assets/boss/Phase 3/Move/Right
+res://assets/boss/Phase 3/Intro
+res://assets/boss/Phase 3/Death

@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhovdgd13cbb"]
+
+[ext_resource type="Texture2D" uid="uid://b3n2w605m5cem" path="res://assets/titles/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Miscellaneous - Title Cards.png" id="1_atxop"]
+[ext_resource type="Script" uid="uid://qe0yhqon2fu7" path="res://scene/enemies/Goopy Le Grande/card.gd" id="1_lrelq"]
+
+[node name="Card" type="CanvasLayer"]
+script = ExtResource("1_lrelq")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="Sprite2D" parent="BoxContainer"]
+visible = false
+position = Vector2(641, 357)
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("1_atxop")
+region_enabled = true
+region_rect = Rect2(2.365306, 2862.4146, 1279.1942, 719.30005)
+
+[node name="Card" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(641, 357)
+scale = Vector2(1.305, 1.305)
+texture = ExtResource("1_atxop")
+region_enabled = true
+region_rect = Rect2(2609.7407, 2864.8103, 520.3013, 379.94092)
+
+[node name="Title" type="Sprite2D" parent="BoxContainer/Card"]
+position = Vector2(3.0517578e-05, -36.781616)
+scale = Vector2(0.63984674, 0.63984674)
+texture = ExtResource("1_atxop")
+region_enabled = true
+region_rect = Rect2(41.102753, 2306.2769, 704.23376, 379.20288)

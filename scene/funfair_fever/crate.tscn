@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://f2o7p8q9r0s1t"]
+
+[ext_resource type="Texture2D" path="res://Funfair Fever/main playable/lv2-1_main_playable_wooden_crate.png" id="1_crate"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crate"]
+size = Vector2(220, 309)
+
+[node name="Crate" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_crate")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_crate")
+

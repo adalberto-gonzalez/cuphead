@@ -1,0 +1,129 @@
+[gd_scene load_steps=14 format=3 uid="uid://4y38vdeilb2e"]
+
+[ext_resource type="Texture2D" uid="uid://bs3xvfld3k74y" path="res://assets/boss_background/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Boss Stages - Floral Fury.png" id="1_gg1im"]
+[ext_resource type="PackedScene" uid="uid://d2xjsycw7bqxe" path="res://scene/titles/ready/ready.tscn" id="1_xmnvq"]
+[ext_resource type="PackedScene" uid="uid://bdym175ihylsq" path="res://scene/enemies/Cagney/cagney.tscn" id="2_0syhi"]
+[ext_resource type="PackedScene" uid="uid://ctuhtboks5w67" path="res://scene/irisTransition/iris_transition.tscn" id="2_hdqvg"]
+[ext_resource type="PackedScene" uid="uid://bkib3m4rmw7lf" path="res://scene/cagneyCarnation/boss_platform/boss_platform.tscn" id="2_wp2bn"]
+[ext_resource type="PackedScene" uid="uid://dhoc7kox6ficn" path="res://scene/player/player.tscn" id="3_3p1qf"]
+[ext_resource type="AudioStream" uid="uid://dl23y80hy3yv5" path="res://assets/sound/music/13 Floral Fury.mp3" id="4_gg1im"]
+[ext_resource type="PackedScene" uid="uid://q2dhqbsu3mha" path="res://scene/UI/lives.tscn" id="5_nfbu8"]
+[ext_resource type="PackedScene" uid="uid://ctdirne24m6ch" path="res://scene/titles/you_died/you_died.tscn" id="9_hdqvg"]
+[ext_resource type="PackedScene" uid="uid://cy7bq2sypcb1n" path="res://scene/fx/fx.tscn" id="10_e8x8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8byr"]
+size = Vector2(11, 730)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8x8r"]
+size = Vector2(1316, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5i0"]
+size = Vector2(11, 727)
+
+[node name="Boss" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="Bg" type="Node2D" parent="."]
+
+[node name="Sprite2D4" type="Sprite2D" parent="Bg"]
+position = Vector2(826, 195)
+texture = ExtResource("1_gg1im")
+region_enabled = true
+region_rect = Rect2(1.1224976, 186.50089, 1735.2153, 474.6553)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Bg"]
+position = Vector2(453, 56)
+texture = ExtResource("1_gg1im")
+region_enabled = true
+region_rect = Rect2(1085.6904, 5309.5005, 75.02002, 77.44043)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Bg"]
+position = Vector2(651, 205)
+texture = ExtResource("1_gg1im")
+region_enabled = true
+region_rect = Rect2(0, 673.84357, 1386.2778, 518.43634)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Bg"]
+position = Vector2(667, 315)
+texture = ExtResource("1_gg1im")
+region_enabled = true
+region_rect = Rect2(0.93084717, 1198.7609, 1445.4229, 815.85046)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Bg"]
+z_index = 3
+position = Vector2(1071, 566)
+texture = ExtResource("1_gg1im")
+region_enabled = true
+region_rect = Rect2(1532.9319, 3702.4492, 427.9679, 325.25537)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Bg"]
+z_index = 3
+position = Vector2(631, 651)
+texture = ExtResource("1_gg1im")
+region_enabled = true
+region_rect = Rect2(204.40671, 3370.2146, 1517.3406, 316.43677)
+
+[node name="run_and_gun" parent="." instance=ExtResource("1_xmnvq")]
+
+[node name="Iris" parent="." instance=ExtResource("2_hdqvg")]
+
+[node name="Lives" parent="." instance=ExtResource("5_nfbu8")]
+
+[node name="GameOver" parent="." instance=ExtResource("9_hdqvg")]
+
+[node name="Fx" parent="." instance=ExtResource("10_e8x8r")]
+
+[node name="Cagney" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_0syhi")]
+position = Vector2(936, 343)
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("3_3p1qf")]
+position = Vector2(277, 504)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-21.5, 355)
+shape = SubResource("RectangleShape2D_j8byr")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(2, 10)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(631, 576)
+shape = SubResource("RectangleShape2D_e8x8r")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1283, 357)
+shape = SubResource("RectangleShape2D_tb5i0")
+
+[node name="BossPlatform" parent="." instance=ExtResource("2_wp2bn")]
+position = Vector2(159, 375)
+
+[node name="Platform" parent="BossPlatform" index="4"]
+animation = &"platformA"
+frame_progress = 0.0
+
+[node name="BossPlatform2" parent="." instance=ExtResource("2_wp2bn")]
+position = Vector2(427, 375)
+phase_offset = 3.142
+
+[node name="Platform" parent="BossPlatform2" index="4"]
+animation = &"platformB"
+frame_progress = 0.0
+
+[node name="BossPlatform3" parent="." instance=ExtResource("2_wp2bn")]
+position = Vector2(692, 375)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gg1im")
+autoplay = true
+
+[editable path="BossPlatform"]
+[editable path="BossPlatform2"]
+[editable path="BossPlatform3"]

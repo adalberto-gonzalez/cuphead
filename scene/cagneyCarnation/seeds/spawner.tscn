@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c32jkr1hpxowi"]
+
+[ext_resource type="Script" uid="uid://bbv3yk15tokcp" path="res://scene/cagneyCarnation/seeds/spawner.gd" id="1_ytbb4"]
+
+[node name="Seed_pawner" type="Node2D"]
+script = ExtResource("1_ytbb4")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+offset_right = 700.0
+offset_bottom = 200.0
+border_color = Color(0.82702947, 0.0015009093, 0.9479521, 1)
+border_width = 5.0
+editor_only = false

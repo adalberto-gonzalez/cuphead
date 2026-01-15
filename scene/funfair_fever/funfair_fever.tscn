@@ -1,0 +1,226 @@
+[gd_scene load_steps=18 format=3 uid="uid://6ab35sy62v81"]
+
+[ext_resource type="PackedScene" uid="uid://b8k3m2n4p5q6r" path="res://scene/funfair_fever/background.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cdnkfs5g7qoqo" path="res://scene/playerCamera/playerCamera.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dhoc7kox6ficn" path="res://scene/player/player.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b7bc46t07sxa2" path="res://scene/funfair_fever/crate.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://4u1s1nbv6p5t" path="res://scene/funfair_fever/trampoline.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://cy7bq2sypcb1n" path="res://scene/fx/fx.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://pnxqmvgla7ej" path="res://scene/exit/exit_door.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://lvk4vmkcrk32" path="res://scene/loader/AreaLoader.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://ctuhtboks5w67" path="res://scene/irisTransition/iris_transition.tscn" id="9"]
+[ext_resource type="AudioStream" uid="uid://stvudc2f683t" path="res://assets/sound/music/04 Tutorial.mp3" id="10"]
+[ext_resource type="Texture2D" uid="uid://bx3x7hj16v150" path="res://Funfair Fever/main playable/lv2-1_main_playable_ground_loop.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://ccjpk8pxxmucl" path="res://Funfair Fever/main playable/lv2-1_main_playable_trunk.png" id="12"]
+[ext_resource type="PackedScene" uid="uid://8m8h0d7t2c14" path="res://scene/funfair_fever/rocket.tscn" id="13"]
+[ext_resource type="PackedScene" uid="uid://b04ypyftnjnk4" path="res://scene/funfair_fever/four_way_blaster.tscn" id="14"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(14000, 70)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(500, 40)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(180, 140)
+
+[node name="FunfairFever" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1")]
+
+[node name="Player" parent="." instance=ExtResource("3")]
+position = Vector2(200, 520)
+
+[node name="GameOver" parent="." instance=ExtResource("9")]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(0, 620)
+collision_layer = 4
+
+[node name="GroundSprite1" type="Sprite2D" parent="Ground"]
+position = Vector2(955.5, -35)
+texture = ExtResource("11")
+
+[node name="GroundSprite2" type="Sprite2D" parent="Ground"]
+position = Vector2(2866.5, -35)
+texture = ExtResource("11")
+
+[node name="GroundSprite3" type="Sprite2D" parent="Ground"]
+position = Vector2(4777.5, -35)
+texture = ExtResource("11")
+
+[node name="GroundSprite4" type="Sprite2D" parent="Ground"]
+position = Vector2(6688.5, -35)
+texture = ExtResource("11")
+
+[node name="GroundSprite5" type="Sprite2D" parent="Ground"]
+position = Vector2(8599.5, -35)
+texture = ExtResource("11")
+
+[node name="GroundSprite6" type="Sprite2D" parent="Ground"]
+position = Vector2(10510.5, -35)
+texture = ExtResource("11")
+
+[node name="GroundSprite7" type="Sprite2D" parent="Ground"]
+position = Vector2(12421.5, -35)
+texture = ExtResource("11")
+
+[node name="GroundSprite8" type="Sprite2D" parent="Ground"]
+position = Vector2(14332.5, -35)
+texture = ExtResource("11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(7000, 0)
+shape = SubResource("1")
+
+[node name="Ledge1" type="StaticBody2D" parent="."]
+position = Vector2(2100, 520)
+collision_layer = 4
+
+[node name="Ledge1Sprite" type="Sprite2D" parent="Ledge1"]
+texture = ExtResource("11")
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 120)
+
+[node name="Ledge1Shape" type="CollisionShape2D" parent="Ledge1"]
+shape = SubResource("2")
+
+[node name="Ledge2" type="StaticBody2D" parent="."]
+position = Vector2(3600, 470)
+collision_layer = 4
+
+[node name="Ledge2Sprite" type="Sprite2D" parent="Ledge2"]
+texture = ExtResource("11")
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 120)
+
+[node name="Ledge2Shape" type="CollisionShape2D" parent="Ledge2"]
+shape = SubResource("2")
+
+[node name="Ledge3" type="StaticBody2D" parent="."]
+position = Vector2(6200, 500)
+collision_layer = 4
+
+[node name="Ledge3Sprite" type="Sprite2D" parent="Ledge3"]
+texture = ExtResource("11")
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 120)
+
+[node name="Ledge3Shape" type="CollisionShape2D" parent="Ledge3"]
+shape = SubResource("2")
+
+[node name="Ledge4" type="StaticBody2D" parent="."]
+position = Vector2(9000, 470)
+collision_layer = 4
+
+[node name="Ledge4Sprite" type="Sprite2D" parent="Ledge4"]
+texture = ExtResource("11")
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 120)
+
+[node name="Ledge4Shape" type="CollisionShape2D" parent="Ledge4"]
+shape = SubResource("2")
+
+[node name="Ledge5" type="StaticBody2D" parent="."]
+position = Vector2(11500, 520)
+collision_layer = 4
+
+[node name="Ledge5Sprite" type="Sprite2D" parent="Ledge5"]
+texture = ExtResource("11")
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 120)
+
+[node name="Ledge5Shape" type="CollisionShape2D" parent="Ledge5"]
+shape = SubResource("2")
+
+[node name="Crate1" parent="." instance=ExtResource("4")]
+position = Vector2(1200, 460)
+scale = Vector2(0.75, 0.75)
+
+[node name="Crate2" parent="." instance=ExtResource("4")]
+position = Vector2(2600, 460)
+scale = Vector2(0.75, 0.75)
+
+[node name="Crate3" parent="." instance=ExtResource("4")]
+position = Vector2(5200, 460)
+scale = Vector2(0.75, 0.75)
+
+[node name="Crate4" parent="." instance=ExtResource("4")]
+position = Vector2(7600, 460)
+scale = Vector2(0.75, 0.75)
+
+[node name="Crate5" parent="." instance=ExtResource("4")]
+position = Vector2(10200, 460)
+scale = Vector2(0.75, 0.75)
+
+[node name="Crate6" parent="." instance=ExtResource("4")]
+position = Vector2(12200, 460)
+scale = Vector2(0.75, 0.75)
+
+[node name="Trampoline1" parent="." instance=ExtResource("5")]
+position = Vector2(3400, 540)
+
+[node name="Trampoline2" parent="." instance=ExtResource("5")]
+position = Vector2(7200, 540)
+
+[node name="Trampoline3" parent="." instance=ExtResource("5")]
+position = Vector2(11000, 540)
+
+[node name="Trunk1" type="StaticBody2D" parent="."]
+position = Vector2(5400, 520)
+collision_layer = 4
+
+[node name="Trunk1Sprite" type="Sprite2D" parent="Trunk1"]
+texture = ExtResource("12")
+
+[node name="Trunk1Shape" type="CollisionShape2D" parent="Trunk1"]
+shape = SubResource("3")
+
+[node name="Trunk2" type="StaticBody2D" parent="."]
+position = Vector2(8800, 520)
+collision_layer = 4
+
+[node name="Trunk2Sprite" type="Sprite2D" parent="Trunk2"]
+texture = ExtResource("12")
+
+[node name="Trunk2Shape" type="CollisionShape2D" parent="Trunk2"]
+shape = SubResource("3")
+
+[node name="Rocket1" parent="." instance=ExtResource("13")]
+position = Vector2(5000, 520)
+
+[node name="Rocket2" parent="." instance=ExtResource("13")]
+position = Vector2(9500, 504)
+
+[node name="FourWayBlaster1" parent="." instance=ExtResource("14")]
+position = Vector2(2099, 373)
+collision_mask = 9
+
+[node name="FourWayBlaster2" parent="." instance=ExtResource("14")]
+position = Vector2(11800, 520)
+collision_mask = 9
+
+[node name="PlayerCamera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2")]
+limit_top = 0
+limit_right = 14000
+limit_bottom = 720
+player = NodePath("../Player")
+
+[node name="Fx" parent="." instance=ExtResource("6")]
+
+[node name="ExitDoor" parent="." instance=ExtResource("7")]
+position = Vector2(13400, 520)
+
+[node name="AreaLoader" parent="." instance=ExtResource("8")]
+position = Vector2(13400, 550)
+scale = Vector2(1.71, 1.71)
+target_scene_path = "res://scene/island/island.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10")
+volume_db = -5.0
+autoplay = true
+parameters/looping = true
+
+[node name="Rocket" parent="." instance=ExtResource("13")]
+position = Vector2(12820, 530)

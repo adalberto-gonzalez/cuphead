@@ -1,0 +1,116 @@
+[gd_scene load_steps=17 format=3 uid="uid://dmughjkqphjm6"]
+
+[ext_resource type="PackedScene" uid="uid://dhoc7kox6ficn" path="res://scene/player/player.tscn" id="1_uk51m"]
+[ext_resource type="PackedScene" uid="uid://ctdirne24m6ch" path="res://scene/titles/you_died/you_died.tscn" id="3_ki8ar"]
+[ext_resource type="PackedScene" uid="uid://dfjav6ljlolf1" path="res://scene/tutorial/blocks/cube.tscn" id="5_h3kax"]
+[ext_resource type="PackedScene" uid="uid://d4h7m1xw0c6ny" path="res://scene/tutorial/blocks/cylinder2.tscn" id="6_kwdap"]
+[ext_resource type="PackedScene" uid="uid://cdnkfs5g7qoqo" path="res://scene/playerCamera/playerCamera.tscn" id="9_5e131"]
+[ext_resource type="PackedScene" uid="uid://dcxlfho0x84v2" path="res://scene/enemies/Funhouse Frazzle/fun_wall.tscn" id="12_8b4sa"]
+[ext_resource type="PackedScene" uid="uid://8m8h0d7t2c14" path="res://scene/funfair_fever/rocket.tscn" id="13_538c3"]
+[ext_resource type="PackedScene" uid="uid://b04ypyftnjnk4" path="res://scene/funfair_fever/four_way_blaster.tscn" id="14_q83eq"]
+[ext_resource type="PackedScene" uid="uid://cy7bq2sypcb1n" path="res://scene/fx/fx.tscn" id="16_edfnn"]
+[ext_resource type="PackedScene" uid="uid://pnxqmvgla7ej" path="res://scene/exit/exit_door.tscn" id="17_w0fhm"]
+[ext_resource type="PackedScene" uid="uid://lvk4vmkcrk32" path="res://scene/loader/AreaLoader.tscn" id="18_0wm4w"]
+[ext_resource type="AudioStream" uid="uid://stvudc2f683t" path="res://assets/sound/music/04 Tutorial.mp3" id="20_ttiy0"]
+[ext_resource type="PackedScene" uid="uid://q2dhqbsu3mha" path="res://scene/UI/lives.tscn" id="25_smhl4"]
+[ext_resource type="PackedScene" uid="uid://fwlkoufs1bij" path="res://scene/areaParry/cardParry.tscn" id="26_l500f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbay"]
+size = Vector2(5225.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqpdg"]
+size = Vector2(83.75, 591)
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_uk51m")]
+position = Vector2(194, 523)
+
+[node name="GameOver" parent="." instance=ExtResource("3_ki8ar")]
+visible = false
+
+[node name="Cube" parent="." instance=ExtResource("5_h3kax")]
+position = Vector2(532, 641)
+collision_mask = 9
+
+[node name="Cylinder2" parent="." instance=ExtResource("6_kwdap")]
+position = Vector2(915, 534)
+collision_mask = 9
+
+[node name="PlayerCamera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("9_5e131")]
+position = Vector2(3, -27)
+limit_top = 0
+limit_right = 5195
+limit_bottom = 720
+player = NodePath("../Player")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(6, -597)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(2603.25, 630)
+shape = SubResource("RectangleShape2D_rkbay")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(3, 61)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2603.25, 630)
+shape = SubResource("RectangleShape2D_rkbay")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-46, 369)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_oqpdg")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(3890, 336)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(1348, 27)
+shape = SubResource("RectangleShape2D_oqpdg")
+
+[node name="Fx" parent="." instance=ExtResource("16_edfnn")]
+
+[node name="ExitDoor" parent="." instance=ExtResource("17_w0fhm")]
+position = Vector2(4898, 580)
+
+[node name="AreaLoader" parent="." instance=ExtResource("18_0wm4w")]
+position = Vector2(4887, 610)
+scale = Vector2(1.71, 1.71)
+target_scene_path = "res://scene/island/island.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_ttiy0")
+volume_db = -5.0
+autoplay = true
+parameters/looping = true
+
+[node name="Lives" parent="." instance=ExtResource("25_smhl4")]
+
+[node name="Card" parent="." instance=ExtResource("26_l500f")]
+position = Vector2(2038, 377)
+
+[node name="Card2" parent="." instance=ExtResource("26_l500f")]
+position = Vector2(2610, 377)
+
+[node name="Card3" parent="." instance=ExtResource("26_l500f")]
+position = Vector2(3153, 377)
+
+[node name="FunWall" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_8b4sa")]
+position = Vector2(3677, 363)
+player = NodePath("../Player")
+
+[node name="Rocket" parent="." instance=ExtResource("13_538c3")]
+position = Vector2(2544, 619)
+speed = 160.0
+turn_rate = 6.0
+hp = 2
+
+[node name="FourWayBlaster" parent="." instance=ExtResource("14_q83eq")]
+position = Vector2(1519, 365)

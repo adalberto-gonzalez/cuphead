@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0m5o6p7q8sat"]
+
+[ext_resource type="Texture2D" uid="uid://bx3x7hj16v150" path="res://Funfair Fever/main playable/lv2-1_main_playable_ground_loop.png" id="1_ground"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_platform"]
+size = Vector2(1892, 50)
+
+[node name="Platform" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ground")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 0)
+shape = SubResource("RectangleShape2D_platform")
+
+
+

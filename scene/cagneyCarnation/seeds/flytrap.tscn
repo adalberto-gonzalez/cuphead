@@ -1,0 +1,100 @@
+[gd_scene load_steps=19 format=3 uid="uid://mf4w6dr1qjeg"]
+
+[ext_resource type="Texture2D" uid="uid://cxqa5a1lrpjkd" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_01.png" id="1_ebrl2"]
+[ext_resource type="Texture2D" uid="uid://dmj4d21kbikbh" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Venus_09_A.png" id="1_rsq0r"]
+[ext_resource type="Script" uid="uid://07qu7ntxpdv" path="res://scene/cagneyCarnation/seeds/flytrap.gd" id="1_ys2r3"]
+[ext_resource type="Texture2D" uid="uid://dkio1utwderh0" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Venus_10_A.png" id="2_evstx"]
+[ext_resource type="Texture2D" uid="uid://bxl65eh2rnpd4" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_02.png" id="2_ys2r3"]
+[ext_resource type="Texture2D" uid="uid://b40eq20jmlfq" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_03.png" id="3_1d6ix"]
+[ext_resource type="Texture2D" uid="uid://dvgv2gjsxjkkn" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Venus_11_A.png" id="3_x66tq"]
+[ext_resource type="Texture2D" uid="uid://dugom7nfkwj1w" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Venus_12.png" id="4_qvqt3"]
+[ext_resource type="Texture2D" uid="uid://dedfhbp8j08ex" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_04.png" id="4_y28pp"]
+[ext_resource type="Texture2D" uid="uid://dpy66pjmkh81g" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_05.png" id="5_rrnka"]
+[ext_resource type="Texture2D" uid="uid://dgja8a3axnno0" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Venus_08_A.png" id="5_w48ve"]
+[ext_resource type="Texture2D" uid="uid://b8x3cf7utyrlf" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_06.png" id="6_3h583"]
+[ext_resource type="Texture2D" uid="uid://cfum7o0ujglyq" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_07.png" id="7_ergo3"]
+[ext_resource type="Texture2D" uid="uid://bn3rwmhv34svl" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_08.png" id="8_t2xe6"]
+[ext_resource type="Texture2D" uid="uid://c1bs1x6mgkooj" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_09.png" id="9_wu5gu"]
+[ext_resource type="Texture2D" uid="uid://tbtqcgxq3uu" path="res://assets/Cagney Carnation/seeds/Venus Flytrap/Death/Venus_Die_10.png" id="10_ihmrb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_awo0k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ebrl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ys2r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1d6ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y28pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rrnka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3h583")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ergo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_t2xe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wu5gu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ihmrb")
+}],
+"loop": false,
+"name": &"death",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rsq0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_evstx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x66tq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qvqt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w48ve")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iqhx3"]
+radius = 30.066593
+
+[node name="Flytrap" type="Area2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_ys2r3")
+
+[node name="Flytrap" type="AnimatedSprite2D" parent="."]
+rotation = 3.1415927
+sprite_frames = SubResource("SpriteFrames_awo0k")
+frame_progress = 0.77868325
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_iqhx3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="Flytrap" to="." method="_on_flytrap_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -13,7 +13,7 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		pyramid.visible = false
 		smoke.play()
 		target.visible = false
-		collision.disabled = true
+		collision.set_deferred("disabled", true)
 
 func _on_smoke_animation_finished() -> void:
 	queue_free()

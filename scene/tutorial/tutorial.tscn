@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ca0ekkp6xds8h"]
+[gd_scene load_steps=27 format=3 uid="uid://ca0ekkp6xds8h"]
 
 [ext_resource type="PackedScene" uid="uid://7y7o28hb682p" path="res://scene/tutorial/background.tscn" id="1_1bj4x"]
 [ext_resource type="PackedScene" uid="uid://cdnkfs5g7qoqo" path="res://scene/playerCamera/playerCamera.tscn" id="1_raclm"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://fdesmjef8sg6" path="res://assets/tutorial/Signs/tutorial_arrow_parry_1.png" id="21_04vfk"]
 [ext_resource type="Texture2D" uid="uid://dgmsiqoogp141" path="res://assets/tutorial/Signs/tutorial_arrow_parry_2.png" id="22_7ebej"]
 [ext_resource type="Texture2D" uid="uid://c2ixmvwqveghm" path="res://assets/tutorial/Signs/tutorial_arrow_parry_3.png" id="23_ls57k"]
+[ext_resource type="PackedScene" uid="uid://ctdirne24m6ch" path="res://scene/titles/you_died/you_died.tscn" id="25_ls57k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbay"]
 size = Vector2(5225.5, 20)
@@ -35,7 +36,10 @@ size = Vector2(83.75, 591)
 [node name="Player" parent="." instance=ExtResource("2_yyy0d")]
 position = Vector2(194, 523)
 
-[node name="GameOver" parent="." instance=ExtResource("15_knl1e")]
+[node name="Iris" parent="." instance=ExtResource("15_knl1e")]
+
+[node name="GameOver" parent="." instance=ExtResource("25_ls57k")]
+visible = false
 
 [node name="Background" parent="." instance=ExtResource("1_1bj4x")]
 layer = -1
@@ -64,6 +68,14 @@ limit_bottom = 720
 player = NodePath("../Player")
 
 [node name="Foreground" parent="." instance=ExtResource("3_raclm")]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(6, -580)
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(2603.25, 630)
+shape = SubResource("RectangleShape2D_rkbay")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(3, -27)

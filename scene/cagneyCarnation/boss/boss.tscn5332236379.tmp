@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://4y38vdeilb2e"]
+
+[ext_resource type="Texture2D" uid="uid://d2aooph1ykdh2" path="res://assets/boss_background/Floral_fury_battleground.webp" id="1_h0x3x"]
+[ext_resource type="PackedScene" uid="uid://bkib3m4rmw7lf" path="res://scene/boss_platform/boss_platform.tscn" id="2_wp2bn"]
+[ext_resource type="PackedScene" uid="uid://dhoc7kox6ficn" path="res://scene/player/player.tscn" id="3_3p1qf"]
+[ext_resource type="PackedScene" uid="uid://dvceb2ue262tq" path="res://scene/conveyor/conveyor.tscn" id="4_j8byr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3p1qf"]
+size = Vector2(1290, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8byr"]
+size = Vector2(11, 730)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5i0"]
+size = Vector2(11, 727)
+
+[node name="Boss" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640.75, 361.5)
+scale = Vector2(1.3451002, 1.3290441)
+texture = ExtResource("1_h0x3x")
+
+[node name="Player" parent="." instance=ExtResource("3_3p1qf")]
+position = Vector2(51, 368)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(644, 572)
+shape = SubResource("RectangleShape2D_3p1qf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-21.5, 355)
+shape = SubResource("RectangleShape2D_j8byr")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1283, 357)
+shape = SubResource("RectangleShape2D_tb5i0")
+
+[node name="BossPlatform" parent="." instance=ExtResource("2_wp2bn")]
+position = Vector2(246, 407)
+
+[node name="Platform" parent="BossPlatform" index="4"]
+animation = &"platformA"
+frame_progress = 0.0
+
+[node name="BossPlatform2" parent="." instance=ExtResource("2_wp2bn")]
+position = Vector2(456, 407)
+phase_offset = 3.142
+
+[node name="Platform" parent="BossPlatform2" index="4"]
+animation = &"platformB"
+frame_progress = 0.0
+
+[node name="BossPlatform3" parent="." instance=ExtResource("2_wp2bn")]
+position = Vector2(669, 407)
+
+[node name="Conveyor" parent="." instance=ExtResource("4_j8byr")]
+position = Vector2(728, 292)
+belt_speed = 120.0
+enabled = true
+
+[editable path="BossPlatform"]
+[editable path="BossPlatform2"]
+[editable path="BossPlatform3"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cx72t4nwwvug0"]
+[gd_scene load_steps=26 format=3 uid="uid://cx72t4nwwvug0"]
 
 [ext_resource type="PackedScene" uid="uid://ctuhtboks5w67" path="res://scene/irisTransition/iris_transition.tscn" id="1_j7ywt"]
 [ext_resource type="PackedScene" uid="uid://cdnkfs5g7qoqo" path="res://scene/playerCamera/playerCamera.tscn" id="3_0npav"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dov0ylhnjxvyt" path="res://scene/player/player_top_down.tscn" id="13_0npav"]
 [ext_resource type="PackedScene" uid="uid://lvk4vmkcrk32" path="res://scene/loader/AreaLoader.tscn" id="15_dmsum"]
 [ext_resource type="AudioStream" uid="uid://bsryvuq58v3f1" path="res://assets/sound/music/06 Inkwell Isle One.mp3" id="15_k7bey"]
+[ext_resource type="Texture2D" uid="uid://bdnfv74hkyndu" path="res://assets/misc/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Overworld - Ruse of an Ooze.png" id="16_5pgqe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwhbu"]
 atlas = ExtResource("11_j7ywt")
@@ -40,6 +41,35 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k7bey")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqohe"]
+atlas = ExtResource("16_5pgqe")
+region = Rect2(3, 3, 249, 332)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjev7"]
+atlas = ExtResource("16_5pgqe")
+region = Rect2(255, 3, 249, 332)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84w6i"]
+atlas = ExtResource("16_5pgqe")
+region = Rect2(507, 3, 249, 332)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tsskp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqohe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjev7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84w6i")
 }],
 "loop": true,
 "name": &"default",
@@ -140,12 +170,6 @@ texture = ExtResource("11_nstfn")
 position = Vector2(767, 177)
 texture = ExtResource("4_k7bey")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Scene"]
-position = Vector2(-1168, -269)
-sprite_frames = SubResource("SpriteFrames_dmsum")
-autoplay = "default"
-frame_progress = 0.23928379
-
 [node name="World1TopLevelPieces01" type="Sprite2D" parent="Scene"]
 z_index = 3
 position = Vector2(-637, 31)
@@ -177,7 +201,7 @@ collision_layer = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D3"]
 position = Vector2(-1513, -289)
-polygon = PackedVector2Array(2129, -339, 1384, -439, 1494, -201, 1651, -175, 1700, -55, 1752, -17, 1908, -69, 1971, -45, 1957, -116, 2005, -228, 2095, -104)
+polygon = PackedVector2Array(2129, -339, 1384, -439, 1494, -201, 1584, -183, 1605, -100, 1708, 40, 1908, -69, 1971, -45, 1957, -116, 2005, -228, 2095, -104)
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Collisions"]
 position = Vector2(0, 35)
@@ -203,8 +227,23 @@ collision_layer = 4
 position = Vector2(-1513, -289)
 polygon = PackedVector2Array(1418, -136, 1410, -87, 1432, -30, 1426, 156, 1375, 221, 1127, 227, 932, 225, 1006, 179, 1196, -345, 1517, -223)
 
-[node name="AreaLoader" parent="." instance=ExtResource("15_dmsum")]
-position = Vector2(-1142, -245)
+[node name="House" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1168, -269)
+sprite_frames = SubResource("SpriteFrames_dmsum")
+autoplay = "default"
+frame_progress = 0.23928379
+
+[node name="AreaLoader" parent="House" instance=ExtResource("15_dmsum")]
+position = Vector2(26, 24)
+
+[node name="Goopy" type="AnimatedSprite2D" parent="."]
+position = Vector2(200, -402)
+sprite_frames = SubResource("SpriteFrames_tsskp")
+autoplay = "default"
+frame_progress = 0.9871683
+
+[node name="AreaLoader" parent="Goopy" instance=ExtResource("15_dmsum")]
+position = Vector2(-7, 133)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_k7bey")

@@ -1,0 +1,140 @@
+[gd_scene load_steps=28 format=3 uid="uid://3pkbxqkmx4re"]
+
+[ext_resource type="Texture2D" uid="uid://bgmyivckkwlh6" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_01.png" id="1_0kw7l"]
+[ext_resource type="Script" uid="uid://bscvuhgwyer1e" path="res://scene/cagneyCarnation/seeds/chomper.gd" id="1_cs50n"]
+[ext_resource type="Texture2D" uid="uid://bhr0kyn7fpu0r" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_02.png" id="2_cs50n"]
+[ext_resource type="Texture2D" uid="uid://dvoii5qfrxfd1" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_03.png" id="3_wt0y0"]
+[ext_resource type="Texture2D" uid="uid://h1vw8f2aikug" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_04.png" id="4_ytv5f"]
+[ext_resource type="Texture2D" uid="uid://cnols7sjpdvlr" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_05.png" id="5_aqqgm"]
+[ext_resource type="Texture2D" uid="uid://c4dhlrs4ao2tt" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_06.png" id="6_24mtm"]
+[ext_resource type="Texture2D" uid="uid://yij7vn48rrkl" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_07.png" id="7_muw3b"]
+[ext_resource type="Texture2D" uid="uid://cbt5sjcoru6q8" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_08.png" id="8_jd6n3"]
+[ext_resource type="Texture2D" uid="uid://da38nx5d4yu4u" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_09.png" id="9_n1tis"]
+[ext_resource type="Texture2D" uid="uid://bwvda5jat3oa5" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_10.png" id="10_ccfav"]
+[ext_resource type="Texture2D" uid="uid://cpl6yyf1f4m5d" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_11.png" id="11_rx4g5"]
+[ext_resource type="Texture2D" uid="uid://da6fdgo2w73xo" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_12.png" id="12_qy6a3"]
+[ext_resource type="Texture2D" uid="uid://i04x4kxpmsui" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_13.png" id="13_tyknv"]
+[ext_resource type="Texture2D" uid="uid://cdqy74ggyfhxw" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_14.png" id="14_3e3i8"]
+[ext_resource type="Texture2D" uid="uid://b5cgdrhypfg8m" path="res://assets/Cagney Carnation/seeds/Chomper/Death/Chomper_Die_15.png" id="15_ag5fx"]
+[ext_resource type="Texture2D" uid="uid://b3oeqmxnnq4eq" path="res://assets/Cagney Carnation/seeds/Chomper/Chomper_01.png" id="16_63qet"]
+[ext_resource type="Texture2D" uid="uid://dpbugpf4dibd5" path="res://assets/Cagney Carnation/seeds/Chomper/Chomper_02.png" id="17_vkjlb"]
+[ext_resource type="Texture2D" uid="uid://lea0jx6kxyt4" path="res://assets/Cagney Carnation/seeds/Chomper/Chomper_03.png" id="18_bbomi"]
+[ext_resource type="Texture2D" uid="uid://bh2vkjrp41sw7" path="res://assets/Cagney Carnation/seeds/Chomper/Chomper_04.png" id="19_h5j8w"]
+[ext_resource type="Texture2D" uid="uid://cnj5267yl67mp" path="res://assets/Cagney Carnation/seeds/Chomper/Chomper_05.png" id="20_7davd"]
+[ext_resource type="Texture2D" uid="uid://boaryg3f31gkd" path="res://assets/Cagney Carnation/seeds/Chomper/Chomper_06.png" id="21_gfar6"]
+[ext_resource type="Texture2D" uid="uid://cf3vavjycw7my" path="res://assets/Cagney Carnation/seeds/Chomper/Chomper_07.png" id="22_h2xds"]
+[ext_resource type="Texture2D" uid="uid://dqmy68umdtd1a" path="res://assets/Cagney Carnation/seeds/Chomper/Chomper_08.png" id="23_wq734"]
+[ext_resource type="Texture2D" uid="uid://dl73tmui2251v" path="res://assets/Cagney Carnation/seeds/Chomper/Chomper_09.png" id="24_f17hg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oxu67"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0kw7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cs50n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wt0y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ytv5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aqqgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_24mtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_muw3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jd6n3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n1tis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ccfav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rx4g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qy6a3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tyknv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3e3i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ag5fx")
+}],
+"loop": false,
+"name": &"death",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_63qet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vkjlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_bbomi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_h5j8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7davd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gfar6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_h2xds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wq734")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_f17hg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0b044"]
+radius = 31.016125
+
+[node name="Chomper" type="Area2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_cs50n")
+
+[node name="Chomper" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.5, -29)
+sprite_frames = SubResource("SpriteFrames_oxu67")
+animation = &"death"
+autoplay = "idle"
+frame = 14
+frame_progress = 1.0
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -34)
+shape = SubResource("CircleShape2D_0b044")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="Chomper" to="." method="_on_chomper_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

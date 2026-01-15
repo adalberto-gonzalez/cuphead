@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=3 uid="uid://c6b8adu38ncfv"]
+
+[ext_resource type="Script" uid="uid://cet8lrwk8ujrg" path="res://scene/funfair_fever/blaster_bullet.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cbjeblqyjb0t0" path="res://assets/misc/fx_wall.png" id="2_vtrol"]
+[ext_resource type="Texture2D" uid="uid://c00pqt36vls26" path="res://assets/misc/bala.png" id="2_yj010"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htwo6"]
+atlas = ExtResource("2_vtrol")
+region = Rect2(0, 0, 232, 282)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntr71"]
+atlas = ExtResource("2_vtrol")
+region = Rect2(232, 0, 232, 282)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frabq"]
+atlas = ExtResource("2_vtrol")
+region = Rect2(464, 0, 232, 282)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k353u"]
+atlas = ExtResource("2_vtrol")
+region = Rect2(696, 0, 232, 282)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ax8g6"]
+atlas = ExtResource("2_vtrol")
+region = Rect2(0, 282, 232, 282)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4loh"]
+atlas = ExtResource("2_vtrol")
+region = Rect2(696, 282, 232, 282)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wqid"]
+atlas = ExtResource("2_vtrol")
+region = Rect2(232, 282, 232, 282)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s45my"]
+atlas = ExtResource("2_vtrol")
+region = Rect2(464, 282, 232, 282)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbpdu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htwo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntr71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frabq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k353u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ax8g6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4loh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wqid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s45my")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="1"]
+radius = 22.022715
+
+[node name="BlasterBullet" type="Area2D"]
+collision_layer = 16
+collision_mask = 5
+script = ExtResource("2")
+
+[node name="smoke" type="AnimatedSprite2D" parent="."]
+visible = false
+scale = Vector2(0.385, 0.385)
+sprite_frames = SubResource("SpriteFrames_wbpdu")
+frame = 7
+frame_progress = 1.0
+
+[node name="Bullet" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_yj010")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[node name="Life" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="smoke" to="." method="_on_smoke_animation_finished"]
+[connection signal="timeout" from="Life" to="." method="_on_life_timeout"]

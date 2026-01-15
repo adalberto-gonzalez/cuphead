@@ -1,0 +1,103 @@
+[gd_scene load_steps=15 format=3 uid="uid://btre2efqsj3po"]
+
+[ext_resource type="Script" uid="uid://bdv2t0kbuvjp1" path="res://scene/enemies/Funhouse Frazzle/lips.gd" id="1_8rgc4"]
+[ext_resource type="Texture2D" uid="uid://dheh0auih2syy" path="res://assets/enemies/Funhouse Frazzle/fun_wall/lips.png" id="1_pdqcc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owqnw"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(204, 0, 102, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0drc"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(306, 0, 102, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyy4g"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(0, 128, 102, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xqal"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(102, 128, 102, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eka31"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(204, 128, 102, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnxta"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(306, 128, 102, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2qin"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(0, 256, 102, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqetw"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(102, 256, 102, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j65ka"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(0, 0, 102, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kfw2"]
+atlas = ExtResource("1_pdqcc")
+region = Rect2(102, 0, 102, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rgc4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owqnw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0drc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyy4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xqal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eka31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnxta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2qin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqetw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j65ka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kfw2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 21.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ppvvu"]
+radius = 15.0
+
+[node name="Lips" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_8rgc4")
+
+[node name="lips" type="AnimatedSprite2D" parent="."]
+z_index = 2
+rotation = 3.1415927
+scale = Vector2(0.585, 0.585)
+sprite_frames = SubResource("SpriteFrames_8rgc4")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ppvvu")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

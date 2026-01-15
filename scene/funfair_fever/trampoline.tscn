@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://4u1s1nbv6p5t"]
+
+[ext_resource type="Texture2D" path="res://Funfair Fever/pit in tent/lv2-1_plank_platform_target_spin_0001.png" id="1_tex"]
+[ext_resource type="Script" path="res://scene/funfair_fever/trampoline.gd" id="2_script"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bounce"]
+radius = 85.0
+
+[node name="Trampoline" type="Area2D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("2_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bounce")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
