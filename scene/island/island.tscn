@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cx72t4nwwvug0"]
+[gd_scene load_steps=32 format=3 uid="uid://cx72t4nwwvug0"]
 
 [ext_resource type="PackedScene" uid="uid://ctuhtboks5w67" path="res://scene/irisTransition/iris_transition.tscn" id="1_j7ywt"]
 [ext_resource type="PackedScene" uid="uid://cdnkfs5g7qoqo" path="res://scene/playerCamera/playerCamera.tscn" id="3_0npav"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://lvk4vmkcrk32" path="res://scene/loader/AreaLoader.tscn" id="15_dmsum"]
 [ext_resource type="AudioStream" uid="uid://bsryvuq58v3f1" path="res://assets/sound/music/06 Inkwell Isle One.mp3" id="15_k7bey"]
 [ext_resource type="Texture2D" uid="uid://bdnfv74hkyndu" path="res://assets/misc/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Overworld - Ruse of an Ooze.png" id="16_5pgqe"]
+[ext_resource type="Texture2D" uid="uid://blpp5mcfxaupf" path="res://assets/Cagney Carnation/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Overworld - Floral Fury.png" id="17_rqohe"]
+[ext_resource type="Texture2D" uid="uid://d01r7bti6er4m" path="res://assets/misc/rng.png" id="19_sjev7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwhbu"]
 atlas = ExtResource("11_j7ywt")
@@ -70,6 +72,35 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_84w6i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsskp"]
+atlas = ExtResource("17_rqohe")
+region = Rect2(2, 2, 231, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nstfn"]
+atlas = ExtResource("17_rqohe")
+region = Rect2(235, 2, 231, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7207"]
+atlas = ExtResource("17_rqohe")
+region = Rect2(468, 2, 231, 135)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a644f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsskp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nstfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7207")
 }],
 "loop": true,
 "name": &"default",
@@ -236,17 +267,33 @@ frame_progress = 0.23928379
 [node name="AreaLoader" parent="House" instance=ExtResource("15_dmsum")]
 position = Vector2(26, 24)
 
-[node name="Goopy" type="AnimatedSprite2D" parent="."]
+[node name="Floral Fury" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(200, -402)
 sprite_frames = SubResource("SpriteFrames_tsskp")
 autoplay = "default"
 frame_progress = 0.9871683
 
-[node name="AreaLoader" parent="Goopy" instance=ExtResource("15_dmsum")]
-position = Vector2(-7, 133)
+[node name="Floral Fury2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-19, 402)
+sprite_frames = SubResource("SpriteFrames_a644f")
+autoplay = "default"
+frame_progress = 0.10531473
+
+[node name="AreaLoader" parent="Floral Fury2" instance=ExtResource("15_dmsum")]
+position = Vector2(-1, -6)
+scale = Vector2(1.41, 1.41)
+target_scene_path = "res://scene/cagneyCarnation/boss/boss.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_k7bey")
 volume_db = -4.0
 autoplay = true
 parameters/looping = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(126, -164)
+texture = ExtResource("19_sjev7")
+
+[node name="AreaLoader2" parent="Sprite2D" instance=ExtResource("15_dmsum")]
+target_scene_path = "res://scene/fondos/fondosrun.tscn"

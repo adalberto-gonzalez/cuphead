@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1j8bs7gf7r60" path="res://assets/misc/card_stars.png" id="3_fxvw2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fgyt8"]
-radius = 54.129475
+radius = 46.043457
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fxvw2"]
 atlas = ExtResource("2_y73ce")
@@ -452,16 +452,19 @@ collision_mask = 33
 script = ExtResource("1_jq1q4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -3)
 shape = SubResource("CircleShape2D_fgyt8")
 debug_color = Color(0.79141444, 0.30106676, 0.7684571, 0.41960785)
 
 [node name="Card" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, 0)
+scale = Vector2(0.82, 0.82)
 sprite_frames = SubResource("SpriteFrames_phdfs")
 animation = &"parried"
 
 [node name="stars" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 0)
+scale = Vector2(0.82, 0.82)
 sprite_frames = SubResource("SpriteFrames_walvo")
 autoplay = "default"
 frame_progress = 0.20148978

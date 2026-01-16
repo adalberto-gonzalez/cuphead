@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs554c3fha7lf"]
+
+[ext_resource type="Script" uid="uid://dawqnb1svqkon" path="res://scene/carro/spawner.gd" id="1_eyslf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyslf"]
+size = Vector2(4200, 740)
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_eyslf")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 12.0
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -740)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2102, 440)
+shape = SubResource("RectangleShape2D_eyslf")
+
+[node name="Up" type="Marker2D" parent="."]
+position = Vector2(0, -482)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

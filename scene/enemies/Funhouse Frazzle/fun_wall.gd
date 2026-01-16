@@ -13,6 +13,13 @@ extends StaticBody2D
 @onready var marker: Marker2D = $Marker
 @onready var marker_2: Marker2D = $Marker2
 @onready var close_timer: Timer = $CloseTimer
+@onready var car_spawner: Marker2D = $CarSpawner
+@onready var car_spawner_2: Marker2D = $CarSpawner2
+@export var cam : Camera2D
+var car = preload("res://scene/carro/carros_wall.tscn")
+var car_2 = preload("res://scene/carro/carros_wall_upsidedown.tscn")
+var full_cam = 19089
+var lock_cam = 5600
 
 @export var player: Player
 
@@ -22,7 +29,7 @@ var hand_state := HAND_STATE.IDLE
 var hand_2_state := HAND_STATE.IDLE
 
 var alternate := false
-var lives := 30
+var lives := 75
 var player_in_range := false
 
 func _ready() -> void:
@@ -50,6 +57,12 @@ func _process(_delta: float) -> void:
 		wall_cover.visible = false
 		eye.visible = false
 		collision.disabled = true
+		if cam != null:
+			cam.limit_right = full_cam
+	if player_in_range and cam != null and lives > 0:
+		cam.limit_right = lock_cam
+	elif cam != null:
+		cam.limit_right = full_cam
 
 # -------------------- DETECTOR --------------------
 
@@ -125,6 +138,15 @@ func _on_mouth_timer_timeout() -> void:
 
 func _on_wall_animation_finished() -> void:
 	if wall.animation == "open_mouth":
+		if player_in_range:
+			if alternate:
+				var car_instance = car_2.instantiate()
+				car_instance.global_position = car_spawner_2.global_position
+				get_tree().current_scene.add_child(car_instance)
+			else:
+				var car_instance = car.instantiate()
+				car_instance.global_position = car_spawner.global_position
+				get_tree().current_scene.add_child(car_instance)
 		close_timer.start()
 		wall.play("mouth_loop")
 		wall_cover.visible = true

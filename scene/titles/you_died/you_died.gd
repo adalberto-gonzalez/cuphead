@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer: Timer = $Timer
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
+@export var level: String
 
 func _ready() -> void:
 	visible = false
@@ -10,7 +11,7 @@ func _ready() -> void:
 
 func _on_timer_timeout() -> void:
 	audio.stop()
-	#SignalManager.on_restart_game.emit()
+	GameManager.restart(level)
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	var tween = get_tree().create_tween()
@@ -18,6 +19,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 
 func on_death(lives : int):
 	if lives == 0:
+		timer.start()
 		visible = true
 		anim.play()
 		audio.play()

@@ -966,8 +966,9 @@ animations = [{
 "speed": 24.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
-size = Vector2(47, 115)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f5r2w"]
+radius = 22.5
+height = 107.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h17s1"]
 radius = 31.0
@@ -1024,7 +1025,7 @@ frame_progress = 0.77797
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 8.5)
-shape = SubResource("RectangleShape2D_dovo2")
+shape = SubResource("CapsuleShape2D_f5r2w")
 debug_color = Color(0, 0.6, 0.69803923, 0.20784314)
 
 [node name="Hitbox" type="Area2D" parent="."]

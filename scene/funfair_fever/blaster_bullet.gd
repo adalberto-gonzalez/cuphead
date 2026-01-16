@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var speed: float = 320.0
-@export var lifetime: float = 3.0
+@export var lifetime: float = 1.5
 @onready var smoke: AnimatedSprite2D = $smoke
 @onready var bullet: Sprite2D = $Bullet
 var velocity: Vector2 = Vector2.ZERO

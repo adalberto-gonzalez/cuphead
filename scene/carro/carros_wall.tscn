@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmt2vinoo3chc"]
+
+[ext_resource type="PackedScene" uid="uid://ddt5jcqrfsmvd" path="res://scene/carro/carro.tscn" id="1_isdy7"]
+[ext_resource type="PackedScene" uid="uid://gqwhhbq0ulow" path="res://scene/carro/carro_2.tscn" id="2_sqe6m"]
+
+[node name="Carros" type="Node2D"]
+
+[node name="Carro" parent="." instance=ExtResource("1_isdy7")]
+
+[node name="Carro2" parent="." instance=ExtResource("2_sqe6m")]
+position = Vector2(411, 0)

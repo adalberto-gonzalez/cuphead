@@ -70,6 +70,7 @@ region_rect = Rect2(204.40671, 3370.2146, 1517.3406, 316.43677)
 [node name="Lives" parent="." instance=ExtResource("5_nfbu8")]
 
 [node name="GameOver" parent="." instance=ExtResource("9_hdqvg")]
+level = "res://scene/cagneyCarnation/boss/boss.tscn"
 
 [node name="Fx" parent="." instance=ExtResource("10_e8x8r")]
 

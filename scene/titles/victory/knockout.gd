@@ -13,12 +13,13 @@ func _ready() -> void:
 
 func _on_timer_timeout() -> void:
 	audio.stop()
-	#SignalManager.on_restart_game.emit()
+	SignalManager.on_restart_game.emit()
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	visible = false
 
 func play_anim():
+	timer.start()
 	visible = true
 	audio.play()
 	fx.play()

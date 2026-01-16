@@ -50,7 +50,8 @@ var positions: Array[Vector2] = [
 @onready var seed_timer: Timer = $seedTimer
 
 # State variables
-var lives = 400
+var death = false
+var lives = 40
 var second_phase = false
 var seed_cont = 0
 var spawners: Array
@@ -280,9 +281,9 @@ func disable_vine_hitbox(vine_idx: int) -> void:
 func execute_phase_two_attack() -> void:
 	var attack_choice = randi_range(0, 1)
 	
-	if attack_choice == 0 and !vine_attack_in_progress:
+	if attack_choice == 0 and !vine_attack_in_progress and !death:
 		activate_random_vines()
-	else:
+	elif !death:
 		anim.play("in_pollen")
 
 # Signal handlers
@@ -410,6 +411,10 @@ func _on_anim_animation_finished() -> void:
 				platform_timer.start()
 
 func handle_death() -> void:
+	death = true
+	low_hitbox.set_deferred("disabled",true)
 	anim.position = positions[8]
 	anim.play("death")
+	hitbox.set_deferred("disabled",true)
 	SignalManager.boss_killed.emit()
+	platform_timer.stop()

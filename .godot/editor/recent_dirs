@@ -1,10 +1,13 @@
+res://assets/enemies/Funhouse Frazzle/fun_wall
+res://scene/enemies/Funhouse Frazzle
+res://assets/Cagney Carnation
+res://assets/enemies/Funhouse Frazzle
 res://assets/boss
 res://assets/titles/A KNOCKOUT
 res://assets/titles
 res://assets/titles/Ready, WALLOP!
 res://assets/Cagney Carnation/seeds/Venus Flytrap/Seed
 res://assets/Cagney Carnation/seeds/Venus Flytrap/Death
-res://assets/Cagney Carnation
 res://assets/Cagney Carnation/seeds/Vines
 res://assets/Cagney Carnation/seeds/Chomper/Death
 res://assets/Cagney Carnation/seeds/Chomper
@@ -15,8 +18,5 @@ res://Funhouse Frazzle Enemies Cuphead/Rocket/Spin
 res://assets/misc
 res://Funhouse Frazzle Enemies Cuphead/Four Way Blaster/Barrel/Shoot/Horizontal
 res://assets/player
-res://assets/enemies/Funhouse Frazzle/fun_wall
 res://assets/boss/Phase 3/Smash
 res://assets/boss/Phase 3/Move/Left
-res://assets/boss/Phase 3/Move/Right
-res://assets/boss/Phase 3/Intro

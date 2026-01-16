@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu28ye0k58x2y"]
+
+[ext_resource type="Script" uid="uid://dgqj6g2lp4ra" path="res://scene/titles/victory/bravo_trigger.gd" id="1_0sacy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5mf0"]
+size = Vector2(200, 512)
+
+[node name="BravoTrigger" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_0sacy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_a5mf0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,0 +1,249 @@
+[gd_scene load_steps=39 format=3 uid="uid://pys1ks7lnap7"]
+
+[ext_resource type="Script" uid="uid://blh7y03fbmlll" path="res://scene/carro/carro.gd" id="1_d60fw"]
+[ext_resource type="Texture2D" uid="uid://cmljnnv72jv82" path="res://assets/enemies/Funhouse Frazzle/car_3.png" id="2_d60fw"]
+[ext_resource type="Texture2D" uid="uid://b2pilk64beb4g" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0004.png" id="3_foaru"]
+[ext_resource type="Texture2D" uid="uid://up1iwp8bdpbh" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0005.png" id="4_q50mr"]
+[ext_resource type="Texture2D" uid="uid://4l8bjr2ldhpk" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0006.png" id="5_a5pqm"]
+[ext_resource type="Texture2D" uid="uid://dyw4ck45e27qe" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0007.png" id="6_01y4f"]
+[ext_resource type="Texture2D" uid="uid://p48a1fseisbf" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0008.png" id="7_p0j0e"]
+[ext_resource type="Texture2D" uid="uid://dh5ym3x1u6p2x" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0009.png" id="8_l5yot"]
+[ext_resource type="Texture2D" uid="uid://bfmays80kvgi4" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0010.png" id="9_n7h50"]
+[ext_resource type="Texture2D" uid="uid://c6tl3pgbknh73" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0011.png" id="10_3764m"]
+[ext_resource type="Texture2D" uid="uid://b67pg4gdxuxhn" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0012.png" id="11_dbi76"]
+[ext_resource type="Texture2D" uid="uid://5qgsh62f0ywb" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0013.png" id="12_4uw6t"]
+[ext_resource type="Texture2D" uid="uid://k4aqe8w5h2e1" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0014.png" id="13_e7qb1"]
+[ext_resource type="Texture2D" uid="uid://d4dvucufspmtt" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0015.png" id="14_soksj"]
+[ext_resource type="Texture2D" uid="uid://bwyb2yhxq1rp7" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0016.png" id="15_4so8k"]
+[ext_resource type="Texture2D" uid="uid://b2iwm4tv1l7yo" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0017.png" id="16_qnhid"]
+[ext_resource type="Texture2D" uid="uid://8wm74i2eqmcw" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0018.png" id="17_sdhie"]
+[ext_resource type="Texture2D" uid="uid://bc1l8odos8ff6" path="res://assets/enemie/car_death/lv2-2_rocket_smoke_large_fx_0019.png" id="18_6l3jp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bw5dx"]
+size = Vector2(350, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_veari"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(0, 0, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foaru"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(1527, 0, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q50mr"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(509, 0, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5pqm"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(1018, 0, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01y4f"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(0, 294, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0j0e"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(0, 1176, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5yot"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(509, 294, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7h50"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(1018, 588, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3764m"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(509, 588, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbi76"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(1527, 588, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uw6t"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(1018, 294, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7qb1"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(1527, 294, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_soksj"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(0, 588, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4so8k"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(0, 882, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnhid"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(509, 882, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdhie"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(1018, 882, 509, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l3jp"]
+atlas = ExtResource("2_d60fw")
+region = Rect2(1527, 882, 509, 294)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a2cm2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_veari")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foaru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q50mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5pqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01y4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0j0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5yot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7h50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3764m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbi76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uw6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7qb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_soksj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4so8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0j0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnhid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdhie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7h50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0j0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6l3jp")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_foaru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q50mr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a5pqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_01y4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p0j0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l5yot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n7h50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3764m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dbi76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4uw6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_e7qb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_soksj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4so8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qnhid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_sdhie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6l3jp")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r20fc"]
+radius = 57.0
+height = 358.0
+
+[node name="Carro" type="CharacterBody2D" groups=["enemigos"]]
+collision_layer = 3
+collision_mask = 9
+script = ExtResource("1_d60fw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 54.5)
+shape = SubResource("RectangleShape2D_bw5dx")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_a2cm2")
+animation = &"caminar"
+frame_progress = 0.87760085
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="AnimatedSprite2D"]
+position = Vector2(-237, -111)
+rect = Rect2(-10, -10, 483, 231)
+
+[node name="Area2DCarro" type="Area2D" parent="." groups=["enemigos"]]
+collision_layer = 2
+collision_mask = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DCarro"]
+position = Vector2(-2, -4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_r20fc")
+debug_color = Color(1.161833, 0, 0, 0.3254902)
+
+[connection signal="screen_exited" from="AnimatedSprite2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_entered" from="Area2DCarro" to="." method="_on_area_2d_carro_body_entered"]

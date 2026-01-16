@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://doplty725vimo"]
+
+[ext_resource type="PackedScene" uid="uid://ddt5jcqrfsmvd" path="res://scene/carro/carro.tscn" id="1_bhq88"]
+[ext_resource type="PackedScene" uid="uid://gqwhhbq0ulow" path="res://scene/carro/carro_2.tscn" id="2_cqgbb"]
+[ext_resource type="PackedScene" uid="uid://pys1ks7lnap7" path="res://scene/carro/carro_3.tscn" id="3_aiim3"]
+
+[node name="Carros" type="Node2D"]
+
+[node name="Carro" parent="." instance=ExtResource("1_bhq88")]
+
+[node name="Carro2" parent="." instance=ExtResource("2_cqgbb")]
+position = Vector2(411, 0)
+
+[node name="Carro3" parent="." instance=ExtResource("3_aiim3")]
+position = Vector2(821, 0)

@@ -539,6 +539,12 @@ position = Vector2(-119, 302)
 [node name="Marker2" type="Marker2D" parent="."]
 position = Vector2(-118.84, -282.47998)
 
+[node name="CarSpawner" type="Marker2D" parent="."]
+position = Vector2(313, 178)
+
+[node name="CarSpawner2" type="Marker2D" parent="."]
+position = Vector2(310, -199)
+
 [node name="HornetTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true

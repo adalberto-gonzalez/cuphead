@@ -12,6 +12,7 @@ extends CharacterBody2D
 
 enum STATE {MOVE, JUMP, EXPLODING}
 var state: STATE
+var initiated = false
 
 var ignore_gravity := false
 
@@ -20,7 +21,7 @@ func _ready() -> void:
 	explosion_sprite.visible = false
 
 func _physics_process(delta: float) -> void:
-	if state == STATE.EXPLODING:
+	if state == STATE.EXPLODING or !initiated:
 		return
 	if ray_up.is_colliding():
 		var collider = ray_up.get_collider()
@@ -70,3 +71,7 @@ func _explode() -> void:
 
 func _on_explosion_finished() -> void:
 	queue_free()
+
+
+func _on_detector_area_entered(area: Area2D) -> void:
+	initiated = true

@@ -22,6 +22,7 @@ const MAX_FALL_SPEED : float = 2000.0
 const HURT_JUMP_SPEED : float = -500.0
 const DASH_SPEED : float = 750.0
 const DEATH_SPEED = -4000
+const DUCK_OFFSET : float = 35.0
 
 #endregion
 
@@ -33,6 +34,8 @@ var can_shoot : bool = true
 var shooting_input: bool = false
 var hurt := false
 var gravity_inverted := false
+var parry_invincible := false
+var duck_initial_position : Vector2
 
 #endregion
 
@@ -43,6 +46,7 @@ var gravity_inverted := false
 @onready var invincible_timer: Timer = $InvincibleTimer
 @onready var dash_timer: Timer = $DashTimer
 @onready var duck_hitbox: CollisionShape2D = $Duck/CollisionShape2D
+@onready var duck_area: Area2D = $Duck
 @onready var hitbox: CollisionShape2D = $Hitbox/CollisionShape2D
 @onready var shoot_timer : Timer = $ShootTimer
 @onready var marker : Marker2D = $ShootMarker
@@ -58,6 +62,9 @@ var gravity_inverted := false
 
 func _ready() -> void:
 	sprite.play("idle")
+	# Guardar posición inicial del duck
+	duck_initial_position = duck_area.position
+	
 	# Conexión de señales del sistema
 	SignalManager.bubble_appear.connect(bubble_appear)
 	SignalManager.bubble_disappear.connect(bubble_dissapear)
@@ -92,6 +99,11 @@ func _physics_process(delta: float) -> void:
 				velocity.y -= GRAVITY * delta
 		else:
 			can_dash = true
+			# Terminar invencibilidad de parry al tocar el suelo
+			if parry_invincible:
+				parry_invincible = false
+				hitbox.disabled = false
+			
 			if velocity.y > 0:
 				velocity.y = 0
 				can_dash = true
@@ -99,6 +111,7 @@ func _physics_process(delta: float) -> void:
 			if current_state == PLAYER_STATES.DUCK and !hurt and current_state != PLAYER_STATES.DEATH:
 				hitbox.disabled = true
 				duck_hitbox.disabled = false
+				update_duck_position()
 			elif !hurt and current_state != PLAYER_STATES.DEATH:
 				hitbox.disabled = false
 				duck_hitbox.disabled = true
@@ -396,6 +409,8 @@ func bubble_dissapear():
 	tween.tween_property(bubble, "scale", Vector2(0,0), 0.2)
 
 func parry():
+	parry_invincible = true
+	hitbox.set_deferred("disabled", true)
 	# Impulso hacia arriba al hacer parry
 	if gravity_inverted:
 		velocity.y = abs(JUMP_SPEED)
@@ -408,6 +423,13 @@ func invert_gravity():
 	gravity_inverted = !gravity_inverted
 	sprite.flip_v = gravity_inverted
 	velocity.y *= -2
+	update_duck_position()
+
+func update_duck_position():
+	if gravity_inverted:
+		duck_area.position = duck_initial_position + Vector2(0, -DUCK_OFFSET)
+	else:
+		duck_area.position = duck_initial_position
 
 #endregion
 
