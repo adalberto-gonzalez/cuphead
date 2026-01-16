@@ -106,6 +106,7 @@ radius = 18.110771
 [node name="Acorn" type="Area2D"]
 collision_layer = 16
 script = ExtResource("1_ukpcc")
+bullet_speed = 300.0
 
 [node name="acorn" type="AnimatedSprite2D" parent="."]
 z_index = 2

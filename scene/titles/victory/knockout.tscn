@@ -1,0 +1,152 @@
+[gd_scene load_steps=33 format=3 uid="uid://bdmw2th8l12my"]
+
+[ext_resource type="Script" uid="uid://lka30ch44rtm" path="res://scene/titles/victory/knockout.gd" id="1_lfb0y"]
+[ext_resource type="AudioStream" uid="uid://bgwbrplmud4ix" path="res://assets/sound/announcer/announcer_knockout_0004.wav" id="2_lfb0y"]
+[ext_resource type="AudioStream" uid="uid://dpe7q56ht4ghn" path="res://assets/sound/fx/knockout_bell.wav" id="3_8wsgw"]
+[ext_resource type="AudioStream" uid="uid://lh6kcd2rw8jl" path="res://assets/sound/fx/knockout_boom_01.wav" id="4_nfgw7"]
+[ext_resource type="Texture2D" uid="uid://bu5edhe48b86a" path="res://assets/titles/A KNOCKOUT/FightText_KO_0000.png" id="5_1cs1t"]
+[ext_resource type="Texture2D" uid="uid://p3hr34dyalvj" path="res://assets/titles/A KNOCKOUT/FightText_KO_0001.png" id="6_ys0r8"]
+[ext_resource type="Texture2D" uid="uid://csm4vti1pj3hm" path="res://assets/titles/A KNOCKOUT/FightText_KO_0002.png" id="7_tvicp"]
+[ext_resource type="Texture2D" uid="uid://xnnfxh1a1r8o" path="res://assets/titles/A KNOCKOUT/FightText_KO_0003.png" id="8_54s3f"]
+[ext_resource type="Texture2D" uid="uid://cof600deljhum" path="res://assets/titles/A KNOCKOUT/FightText_KO_0004.png" id="9_m0is6"]
+[ext_resource type="Texture2D" uid="uid://uj60eo8se5oe" path="res://assets/titles/A KNOCKOUT/FightText_KO_0005.png" id="10_sk7lj"]
+[ext_resource type="Texture2D" uid="uid://ujou7spbs73h" path="res://assets/titles/A KNOCKOUT/FightText_KO_0006.png" id="11_oelgg"]
+[ext_resource type="Texture2D" uid="uid://bmtlgbatp30xg" path="res://assets/titles/A KNOCKOUT/FightText_KO_0007.png" id="12_7aa3d"]
+[ext_resource type="Texture2D" uid="uid://cibi7yjrd7gte" path="res://assets/titles/A KNOCKOUT/FightText_KO_0008.png" id="13_dh1n3"]
+[ext_resource type="Texture2D" uid="uid://dapsrt6fm4fs2" path="res://assets/titles/A KNOCKOUT/FightText_KO_0009.png" id="14_2g6w6"]
+[ext_resource type="Texture2D" uid="uid://dj1sn5x365wkc" path="res://assets/titles/A KNOCKOUT/FightText_KO_0010.png" id="15_ax4sh"]
+[ext_resource type="Texture2D" uid="uid://b2arfacwhlrm6" path="res://assets/titles/A KNOCKOUT/FightText_KO_0011.png" id="16_dojvn"]
+[ext_resource type="Texture2D" uid="uid://djtmyljqwsej3" path="res://assets/titles/A KNOCKOUT/FightText_KO_0012.png" id="17_g8jnq"]
+[ext_resource type="Texture2D" uid="uid://dxwtyj035lmti" path="res://assets/titles/A KNOCKOUT/FightText_KO_0013.png" id="18_jcld4"]
+[ext_resource type="Texture2D" uid="uid://hsif74tlvrvq" path="res://assets/titles/A KNOCKOUT/FightText_KO_0014.png" id="19_jkc3d"]
+[ext_resource type="Texture2D" uid="uid://danytyt24u271" path="res://assets/titles/A KNOCKOUT/FightText_KO_0015.png" id="20_fwx0t"]
+[ext_resource type="Texture2D" uid="uid://bdb2bmgbq7rka" path="res://assets/titles/A KNOCKOUT/FightText_KO_0016.png" id="21_q2yee"]
+[ext_resource type="Texture2D" uid="uid://bi7qop4kbhxhd" path="res://assets/titles/A KNOCKOUT/FightText_KO_0017.png" id="22_enxl1"]
+[ext_resource type="Texture2D" uid="uid://br7ndqflxqhu2" path="res://assets/titles/A KNOCKOUT/FightText_KO_0018.png" id="23_pmy0m"]
+[ext_resource type="Texture2D" uid="uid://cvef7i8ncd15g" path="res://assets/titles/A KNOCKOUT/FightText_KO_0019.png" id="24_cpdx8"]
+[ext_resource type="Texture2D" uid="uid://dql6wrbk04y5i" path="res://assets/titles/A KNOCKOUT/FightText_KO_0020.png" id="25_h6lrx"]
+[ext_resource type="Texture2D" uid="uid://chru7mvoemyyb" path="res://assets/titles/A KNOCKOUT/FightText_KO_0021.png" id="26_mepma"]
+[ext_resource type="Texture2D" uid="uid://cvcpv7m5ahmlb" path="res://assets/titles/A KNOCKOUT/FightText_KO_0022.png" id="27_p85fs"]
+[ext_resource type="Texture2D" uid="uid://db6x3y6xvwuo1" path="res://assets/titles/A KNOCKOUT/FightText_KO_0023.png" id="28_y7mvc"]
+[ext_resource type="Texture2D" uid="uid://wti6cm4gxaae" path="res://assets/titles/A KNOCKOUT/FightText_KO_0024.png" id="29_h8d11"]
+[ext_resource type="Texture2D" uid="uid://fu2h24yvk3d3" path="res://assets/titles/A KNOCKOUT/FightText_KO_0025.png" id="30_e05es"]
+[ext_resource type="Texture2D" uid="uid://dis81uq6ye08w" path="res://assets/titles/A KNOCKOUT/FightText_KO_0026.png" id="31_elys6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1y08x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1cs1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ys0r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tvicp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_54s3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m0is6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_sk7lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_oelgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7aa3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dh1n3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2g6w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ax4sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dojvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_g8jnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jcld4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jkc3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_fwx0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q2yee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_enxl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pmy0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_cpdx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_h6lrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mepma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_p85fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_y7mvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_h8d11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_e05es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_elys6")
+}],
+"loop": false,
+"name": &"default",
+"speed": 18.0
+}]
+
+[node name="Knockout" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_lfb0y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 356)
+scale = Vector2(2.54, 2.533)
+sprite_frames = SubResource("SpriteFrames_1y08x")
+frame = 26
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("2_lfb0y")
+
+[node name="fx" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("3_8wsgw")
+
+[node name="fx2" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("4_nfgw7")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

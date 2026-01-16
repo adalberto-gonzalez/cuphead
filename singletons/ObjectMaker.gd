@@ -7,6 +7,7 @@ var flytrap = preload("res://scene/cagneyCarnation/seeds/flytrap.tscn")
 var vine = preload("res://scene/cagneyCarnation/seeds/vine.tscn")
 var chomper_seed = preload("res://scene/cagneyCarnation/seeds/chomper_seed.tscn")
 var flytrap_seed = preload("res://scene/cagneyCarnation/seeds/flytrap_seed.tscn")
+var pollen = preload("res://scene/enemies/Cagney/pollen.tscn")
 
 func create_player_bullet(dir: Vector2, marker_pos: Vector2):
 	var new_bullet = player_bullet.instantiate()
@@ -54,3 +55,8 @@ func create_flytrap_seed(pos: Vector2):
 	var flytrap = flytrap_seed.instantiate()
 	flytrap.global_position = pos
 	get_tree().current_scene.add_child(flytrap)
+
+func create_pollen(pos: Vector2):
+	var pollen = pollen.instantiate()
+	pollen.global_position = pos
+	get_tree().current_scene.add_child(pollen)

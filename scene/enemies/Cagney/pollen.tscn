@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhisilks2p7hd"]
+
+[ext_resource type="Script" uid="uid://djug4fb860wmm" path="res://scene/enemies/Cagney/pollen.gd" id="1_1q3yl"]
+[ext_resource type="Texture2D" uid="uid://6eomh7dxtw7j" path="res://assets/boss/pollen_p.png" id="2_1q3yl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuftp"]
+atlas = ExtResource("2_1q3yl")
+region = Rect2(0, 0, 57, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kljth"]
+atlas = ExtResource("2_1q3yl")
+region = Rect2(57, 0, 57, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dumds"]
+atlas = ExtResource("2_1q3yl")
+region = Rect2(114, 0, 57, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iae5"]
+atlas = ExtResource("2_1q3yl")
+region = Rect2(171, 0, 57, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r1se"]
+atlas = ExtResource("2_1q3yl")
+region = Rect2(0, 56, 57, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uck74"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuftp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kljth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dumds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iae5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r1se")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iae5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dumds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kljth")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ppvvu"]
+radius = 18.110771
+
+[node name="Pollen" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_1q3yl")
+
+[node name="Pollen" type="AnimatedSprite2D" parent="."]
+z_index = 2
+rotation = 3.1415927
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_uck74")
+autoplay = "default"
+frame_progress = 0.2773281
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ppvvu")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="animation_finished" from="Pollen" to="." method="_on_acorn_animation_finished"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

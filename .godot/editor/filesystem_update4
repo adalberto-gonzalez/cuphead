@@ -33,3 +33,10 @@ res://scene/enemies/Cagney/acorn.tscn
 res://scene/enemies/Cagney/acorn.gd
 res://scene/enemies/Funhouse Frazzle/lips.gd
 res://scene/enemies/Funhouse Frazzle/fun_wall.gd
+res://singletons/SignalManager.gd
+res://scene/titles/victory/victory.gd
+res://scene/titles/victory/victory.tscn
+res://scene/titles/victory/knockout.tscn
+res://scene/titles/victory/knockout.gd
+res://scene/enemies/Cagney/pollen.tscn
+res://scene/enemies/Cagney/pollen.gd

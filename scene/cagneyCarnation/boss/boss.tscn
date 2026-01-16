@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://4y38vdeilb2e"]
+[gd_scene load_steps=15 format=3 uid="uid://4y38vdeilb2e"]
 
 [ext_resource type="Texture2D" uid="uid://bs3xvfld3k74y" path="res://assets/boss_background/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Boss Stages - Floral Fury.png" id="1_gg1im"]
 [ext_resource type="PackedScene" uid="uid://d2xjsycw7bqxe" path="res://scene/titles/ready/ready.tscn" id="1_xmnvq"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dhoc7kox6ficn" path="res://scene/player/player.tscn" id="3_3p1qf"]
 [ext_resource type="AudioStream" uid="uid://dl23y80hy3yv5" path="res://assets/sound/music/13 Floral Fury.mp3" id="4_gg1im"]
 [ext_resource type="PackedScene" uid="uid://q2dhqbsu3mha" path="res://scene/UI/lives.tscn" id="5_nfbu8"]
+[ext_resource type="PackedScene" uid="uid://bdmw2th8l12my" path="res://scene/titles/victory/knockout.tscn" id="7_8e8wj"]
 [ext_resource type="PackedScene" uid="uid://ctdirne24m6ch" path="res://scene/titles/you_died/you_died.tscn" id="9_hdqvg"]
 [ext_resource type="PackedScene" uid="uid://cy7bq2sypcb1n" path="res://scene/fx/fx.tscn" id="10_e8x8r"]
 
@@ -20,8 +21,7 @@ size = Vector2(1316, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5i0"]
 size = Vector2(11, 727)
 
-[node name="Boss" type="StaticBody2D"]
-collision_layer = 2
+[node name="Boss" type="Node2D"]
 
 [node name="Bg" type="Node2D" parent="."]
 
@@ -72,6 +72,8 @@ region_rect = Rect2(204.40671, 3370.2146, 1517.3406, 316.43677)
 [node name="GameOver" parent="." instance=ExtResource("9_hdqvg")]
 
 [node name="Fx" parent="." instance=ExtResource("10_e8x8r")]
+
+[node name="Knockout" parent="." instance=ExtResource("7_8e8wj")]
 
 [node name="Cagney" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_0syhi")]
 position = Vector2(936, 343)
