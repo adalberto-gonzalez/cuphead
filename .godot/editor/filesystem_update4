@@ -1,31 +1,9 @@
-res://scene/carro/carros_upsidedown.tscn
-res://scene/carro/spawner.tscn
-res://scene/carro/spawner.gd
+res://scene/menu/pause.tscn
+res://scene/menu/pause.gd
 res://scene/fondos/fondosrun.tscn
-res://scene/player/player.tscn
-res://scene/player/player.gd
-res://scene/carro/duck_upsidedown.tscn
-res://scene/enemies/Funhouse Frazzle/fun_wall.tscn
-res://scene/enemies/Funhouse Frazzle/fun_wall.gd
-res://scene/carro/duck.tscn
-res://scene/carro/carro.gd
-res://scene/carro/carros_wall_upsidedown.tscn
-res://scene/carro/carros_wall.tscn
-res://scene/titles/you_died/you_died.gd
-res://singletons/GameManager.gd
-res://singletons/SignalManager.gd
-res://scene/island/island.tscn
-res://scene/funfair_fever/rocket.tscn
-res://scene/funfair_fever/blaster_bullet.tscn
-res://scene/funfair_fever/blaster_bullet.gd
-res://scene/enemies/Funhouse Frazzle/fun_wall_final.tscn
-res://scene/enemies/Funhouse Frazzle/fun_wall_2.tres.gd
-res://scene/player/killzone.gd
-res://scene/player/killzone.tscn
 res://scene/cagneyCarnation/boss/boss.tscn
-res://scene/enemies/Cagney/cagney.tscn
-res://scene/enemies/Cagney/cagney.gd
-res://scene/titles/victory/knockout.gd
-res://scene/titles/bravo/bravo.gd
-res://scene/titles/victory/bravo_trigger.gd
-res://scene/titles/victory/bravo_trigger.tscn
+res://scene/titles/you_died/you_died.gd
+res://singletons/SignalManager.gd
+res://scene/enemies/Cagney/acorn.gd
+res://scene/menu/menu.tscn
+res://singletons/GameManager.gd

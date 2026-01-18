@@ -11,7 +11,6 @@ var initial_y: float = 0.0
 
 func _ready() -> void:
 	initial_y = global_position.y
-	print("hola")
 
 func _process(delta: float) -> void:
 	time_passed += delta

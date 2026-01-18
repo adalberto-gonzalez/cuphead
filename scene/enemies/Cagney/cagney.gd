@@ -51,7 +51,7 @@ var positions: Array[Vector2] = [
 
 # State variables
 var death = false
-var lives = 40
+var lives = 400
 var second_phase = false
 var seed_cont = 0
 var spawners: Array

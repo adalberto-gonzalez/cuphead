@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnle1oc7ij41n"]
+
+[ext_resource type="Texture2D" uid="uid://brxcitlkncdo5" path="res://assets/misc/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Miscellaneous - Death Cards.png" id="1_4s5sj"]
+[ext_resource type="Script" uid="uid://okt6vvaejby0" path="res://scene/menu/pause.gd" id="1_xubfx"]
+[ext_resource type="FontFile" uid="uid://br6emg6xst1yk" path="res://assets/fonts/OpenSans-ExtraBold.ttf" id="2_xubfx"]
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+layer = 5
+visible = false
+script = ExtResource("1_xubfx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 3
+z_index = 5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.44705883)
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+process_mode = 3
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PcComputerCupheadDon\'tDealWithTheDevil!MiscellaneousDeathCards" type="Sprite2D" parent="BoxContainer"]
+texture = ExtResource("1_4s5sj")
+region_enabled = true
+region_rect = Rect2(25.307037, 828.4913, 574.8718, 650.87177)
+
+[node name="Button" type="Button" parent="."]
+process_mode = 3
+z_index = 5
+offset_left = 562.0
+offset_top = 451.0
+offset_right = 672.0
+offset_bottom = 509.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xubfx")
+theme_override_font_sizes/font_size = 36
+text = "Retry"
+flat = true
+
+[node name="Button2" type="Button" parent="."]
+process_mode = 3
+z_index = 5
+offset_left = 577.0
+offset_top = 513.0
+offset_right = 656.0
+offset_bottom = 571.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xubfx")
+theme_override_font_sizes/font_size = 36
+text = "Exit
+"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="retry"]
+[connection signal="pressed" from="Button2" to="." method="return_to_island"]

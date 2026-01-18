@@ -1,3 +1,10 @@
+VBoxContainer
+Button
+Label
+BoxContainer
+Container
+ColorRect
+CanvasLayer
 CollisionShape2D
 Area2D
 Sprite2D
@@ -6,9 +13,3 @@ Timer
 AudioStreamPlayer
 AnimationPlayer
 CollisionPolygon2D
-Node2D
-Node
-AnimatedSprite2D
-ReferenceRect
-CharacterBody2D
-RayCast2D

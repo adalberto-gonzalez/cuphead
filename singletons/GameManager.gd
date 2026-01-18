@@ -1,6 +1,6 @@
 extends Node
 
-var lives = 3
+var lives = 1000
 
 func _ready() -> void:
 	SignalManager.on_hurt.connect(on_hurt_received)

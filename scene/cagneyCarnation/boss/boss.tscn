@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://4y38vdeilb2e"]
+[gd_scene load_steps=17 format=3 uid="uid://4y38vdeilb2e"]
 
 [ext_resource type="Texture2D" uid="uid://bs3xvfld3k74y" path="res://assets/boss_background/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Boss Stages - Floral Fury.png" id="1_gg1im"]
 [ext_resource type="PackedScene" uid="uid://d2xjsycw7bqxe" path="res://scene/titles/ready/ready.tscn" id="1_xmnvq"]
 [ext_resource type="PackedScene" uid="uid://bdym175ihylsq" path="res://scene/enemies/Cagney/cagney.tscn" id="2_0syhi"]
+[ext_resource type="Texture2D" uid="uid://bs7b2ggikgwpt" path="res://assets/misc/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Miscellaneous - Mugshots.png" id="2_4kcvv"]
 [ext_resource type="PackedScene" uid="uid://ctuhtboks5w67" path="res://scene/irisTransition/iris_transition.tscn" id="2_hdqvg"]
 [ext_resource type="PackedScene" uid="uid://bkib3m4rmw7lf" path="res://scene/cagneyCarnation/boss_platform/boss_platform.tscn" id="2_wp2bn"]
 [ext_resource type="PackedScene" uid="uid://dhoc7kox6ficn" path="res://scene/player/player.tscn" id="3_3p1qf"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bdmw2th8l12my" path="res://scene/titles/victory/knockout.tscn" id="7_8e8wj"]
 [ext_resource type="PackedScene" uid="uid://ctdirne24m6ch" path="res://scene/titles/you_died/you_died.tscn" id="9_hdqvg"]
 [ext_resource type="PackedScene" uid="uid://cy7bq2sypcb1n" path="res://scene/fx/fx.tscn" id="10_e8x8r"]
+[ext_resource type="PackedScene" uid="uid://cnle1oc7ij41n" path="res://scene/menu/pause.tscn" id="12_2huwr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8byr"]
 size = Vector2(11, 730)
@@ -22,6 +24,18 @@ size = Vector2(1316, 20)
 size = Vector2(11, 727)
 
 [node name="Boss" type="Node2D"]
+
+[node name="Pause" parent="." instance=ExtResource("12_2huwr")]
+layer = 8
+level = "res://scene/cagneyCarnation/boss/boss.tscn"
+
+[node name="PcComputerCupheadDon\'tDealWithTheDevil!MiscellaneousMugshots" type="Sprite2D" parent="Pause"]
+z_index = 5
+position = Vector2(615, 201.00002)
+scale = Vector2(1.219697, 1.219697)
+texture = ExtResource("2_4kcvv")
+region_enabled = true
+region_rect = Rect2(1255.8403, 3085.1304, 234.74011, 231.1101)
 
 [node name="Bg" type="Node2D" parent="."]
 

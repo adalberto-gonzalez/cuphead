@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://brrh8e1dtl1vy"]
+[gd_scene load_steps=90 format=3 uid="uid://brrh8e1dtl1vy"]
 
 [ext_resource type="Texture2D" uid="uid://b650rvqenf7oc" path="res://assets/funhousesprites/Background/Mid/Mid Crater/Loop/lv2-2_bg_mid_crater_loop.png" id="23_3y17x"]
 [ext_resource type="PackedScene" uid="uid://dhoc7kox6ficn" path="res://scene/player/player.tscn" id="23_aucsl"]
@@ -68,6 +68,8 @@
 [ext_resource type="PackedScene" uid="uid://fwlkoufs1bij" path="res://scene/areaParry/cardParry.tscn" id="76_n6mwp"]
 [ext_resource type="PackedScene" uid="uid://d2gcbhq8lqrd2" path="res://scene/titles/bravo/bravo.tscn" id="76_ymfui"]
 [ext_resource type="PackedScene" uid="uid://cu28ye0k58x2y" path="res://scene/titles/victory/bravo_trigger.tscn" id="77_gp4sp"]
+[ext_resource type="PackedScene" uid="uid://cnle1oc7ij41n" path="res://scene/menu/pause.tscn" id="78_ymfui"]
+[ext_resource type="Texture2D" uid="uid://bs7b2ggikgwpt" path="res://assets/misc/PC _ Computer - Cuphead_ Don't Deal With the Devil! - Miscellaneous - Mugshots.png" id="79_dtk8h"]
 [ext_resource type="Texture2D" uid="uid://bxqbbyu3w2kg7" path="res://assets/funhousesprites/Midground/Platforms/X-Large/Mask/lv2-2_xlarge_platform_mask_0002.png" id="79_gijvt"]
 [ext_resource type="Texture2D" uid="uid://bk1w0v5128gv6" path="res://assets/funhousesprites/Midground/Platforms/Conveyer Belt/lv2-2_chevron_loop.png" id="80_xq0y0"]
 [ext_resource type="Texture2D" uid="uid://vg3p8u8gvwo" path="res://assets/funhousesprites/Midground/Platforms/Single Platform/Mask/lv2-2_single_platform_mask_0001 #139988.png" id="81_wtrvm"]
@@ -173,7 +175,7 @@ limit_bottom = 720
 player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("23_aucsl")]
-position = Vector2(17246, 502)
+position = Vector2(233, 538)
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -1743,3 +1745,14 @@ position = Vector2(18534, 1202)
 
 [node name="BravoTrigger" parent="." instance=ExtResource("77_gp4sp")]
 position = Vector2(19053, 446)
+
+[node name="Pause" parent="." instance=ExtResource("78_ymfui")]
+level = "res://scene/fondos/fondosrun.tscn"
+
+[node name="PcComputerCupheadDon\'tDealWithTheDevil!MiscellaneousMugshots" type="Sprite2D" parent="Pause"]
+z_index = 5
+position = Vector2(617.1565, 208.5)
+scale = Vector2(1.1910568, 1.191057)
+texture = ExtResource("79_dtk8h")
+region_enabled = true
+region_rect = Rect2(1847.1818, 3074.2727, 281.81824, 246.36377)
